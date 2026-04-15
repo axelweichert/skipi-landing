@@ -1,0 +1,7 @@
+name = "skipi-landing"
+main = "src/worker.js"
+compatibility_date = "2024-09-23"
+account_id = "6b9b3fa0e9f6be87faf7ca1b212641a3"
+
+[assets]
+directory = "./public"
