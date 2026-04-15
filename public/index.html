@@ -65,6 +65,8 @@
   .hero {
     min-height: 100vh;
     display: flex; align-items: center;
+    justify-content: space-between;
+    gap: 48px;
     padding: 120px 48px 80px;
     position: relative;
     overflow: hidden;
@@ -81,7 +83,7 @@
                       linear-gradient(90deg, var(--border) 1px, transparent 1px);
     background-size: 60px 60px;
   }
-  .hero-content { position: relative; max-width: 700px; }
+  .hero-content { position: relative; flex: 0 0 auto; max-width: 520px; }
   .hero-badge {
     display: inline-flex; align-items: center; gap: 8px;
     background: rgba(232,93,4,.15); border: 1px solid rgba(232,93,4,.3);
@@ -132,8 +134,10 @@
   .stat-label { font-size: 12px; color: var(--text2); margin-top: 4px; letter-spacing: .05em; text-transform: uppercase; }
 
   .hero-visual {
-    position: absolute; right: -40px; top: 50%; transform: translateY(-50%);
-    width: 55%; max-width: 800px;
+    position: relative;
+    flex: 1 1 auto;
+    max-width: 680px;
+    min-width: 0;
   }
   .hero-screen {
     background: var(--dark2); border: 1px solid var(--border);
@@ -326,7 +330,7 @@
   @media (max-width: 900px) {
     nav { padding: 0 24px; }
     .nav-links { display: none; }
-    .hero { padding: 100px 24px 60px; }
+    .hero { padding: 100px 24px 60px; flex-direction: column; align-items: flex-start; gap: 40px; }
     .hero-visual { display: none; }
     h1 { font-size: 52px; }
     section { padding: 60px 24px; }
@@ -358,10 +362,10 @@
   <div class="hero-grid"></div>
   <div class="hero-content">
     <div style="margin-bottom:32px">
-        <img src="/skipi-logo-dark.svg" alt="Skipi" style="height:72px;width:auto">
+        <img src="/skipi-logo-dark.svg" alt="Skipi" style="height:120px;width:auto">
       </div>
       <div class="hero-badge">Neu: Vertex AI Bilderkennung</div>
-    <h1>Weniger<br>Tippen.<br><em>Mehr</em><br>Fahren.</h1>
+    <h1>Weniger<br>Tippen.<br><em>Mehr</em><br>Shooten.</h1>
     <p class="hero-sub">
       Skipi ist der <strong>intelligente Foto-Assistent für Motorsport-Fotografen</strong>. KI erkennt Startnummern, ordnet Fahrer zu, schreibt Metadaten – direkt im Browser, ohne Installation.
     </p>

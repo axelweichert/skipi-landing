@@ -1,5 +1,11 @@
 # Changelog – Skipi Landing Page
 
+## [1.1.2] – 2026-04-16
+- Hero: Logo-Höhe von 72px auf 120px vergrößert
+- Hero: Slogan „Mehr Fahren" → „Mehr Shooten" (passt zu Fotografen)
+- Hero: Layout von `position:absolute` auf Flexbox umgestellt – Content und Screenshot korrekt nebeneinander
+- Responsive: `flex-direction:column` bei < 900px ergänzt
+
 ## [1.1.0] – 2026-04-16
 - Logo: skipi-logo-dark.svg (weiß auf dunkel) in Nav, Hero und Footer
 - Font: Century Gothic 'Apple Gothic' korrekte Schreibweise
