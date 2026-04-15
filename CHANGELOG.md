@@ -1,5 +1,8 @@
 # Changelog – Skipi Landing Page
 
+## [1.1.3] – 2026-04-16
+- Hero: Slogan auf 2 Zeilen gekürzt: „Weniger manuell taggen. / Mehr shooten."
+
 ## [1.1.2] – 2026-04-16
 - Hero: Logo-Höhe von 72px auf 120px vergrößert
 - Hero: Slogan „Mehr Fahren" → „Mehr Shooten" (passt zu Fotografen)
