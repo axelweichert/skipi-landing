@@ -1,5 +1,8 @@
 # Changelog – Skipi Landing Page
 
+## [1.1.6] – 2026-04-16
+- Hero: Logo-Höhe auf 240px
+
 ## [1.1.5] – 2026-04-16
 - Hero: Logo-Höhe von 120px auf 180px (+50%)
 
