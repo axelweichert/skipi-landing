@@ -2,7 +2,7 @@ name: Deploy skipi-landing to Cloudflare Workers
 
 on:
   push:
-    branches: [main]
+    branches: [master]
 
 jobs:
   deploy:
