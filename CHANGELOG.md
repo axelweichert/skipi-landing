@@ -1,5 +1,8 @@
 # Changelog – Skipi Landing Page
 
+## [1.1.5] – 2026-04-16
+- Hero: Logo-Höhe von 120px auf 180px (+50%)
+
 ## [1.1.4] – 2026-04-16
 - Hero: Gesamtlayout zentriert (flex-direction column, align-items center, text-align center)
 - Hero: Logo, Badge, H1, Subtext, Buttons, Stats alle zentriert
