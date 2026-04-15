@@ -1,5 +1,11 @@
 # Changelog – Skipi Landing Page
 
+## [1.1.4] – 2026-04-16
+- Hero: Gesamtlayout zentriert (flex-direction column, align-items center, text-align center)
+- Hero: Logo, Badge, H1, Subtext, Buttons, Stats alle zentriert
+- Hero: App-Screenshot zentriert unter dem Text, max-width 900px
+- Sektionen: section-label, h2, section-sub durchgehend zentriert
+
 ## [1.1.3] – 2026-04-16
 - Hero: Slogan auf 2 Zeilen gekürzt: „Weniger manuell taggen. / Mehr shooten."
 
