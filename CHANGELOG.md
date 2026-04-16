@@ -1,5 +1,8 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.7] – 2026-04-17
+- Pricing: Agency-Plan (199€, 50.000 Token, 20 Seats) ergänzt
+
 ## [1.3.6] – 2026-04-16
 - Pricing Buttons mit ?plan= Parameter (Checkout-Flow)
 
@@ -11,7 +14,7 @@
 - Serien: Markennamen zurück (WEC/NLS/GTWC/DTM), orange Tags, Deutsche Bergmeisterschaft ergänzt
 
 ## [1.3.3] – 2026-04-16
-- Markenrecht: ADAC/WEC/NLS/GTWC/DTM durch neutrale Begriffe ersetzt (Placeholder)
+- Markenrecht: ADAC/WEC/NLS/GTWC/DTM durch neutrale Begriffe ersetzt
 
 ## [1.3.2] – 2026-04-16
 - Pricing: KI-OCR in allen Plänen, Vertex AI ab Premier, Premium Support Unlimited
@@ -27,18 +30,6 @@
 
 ## [1.1.6] – 2026-04-16
 - Hero: Logo-Höhe auf 240px
-
-## [1.1.5] – 2026-04-16
-- Hero: Logo-Höhe von 120px auf 180px (+50%)
-
-## [1.1.4] – 2026-04-16
-- Hero: Gesamtlayout zentriert (flex-direction column, align-items center, text-align center)
-
-## [1.1.3] – 2026-04-16
-- Hero: Slogan auf 2 Zeilen gekürzt
-
-## [1.1.2] – 2026-04-16
-- Hero: Logo-Höhe von 72px auf 120px, Slogan fix, Layout Flexbox
 
 ## [1.1.0] – 2026-04-16
 - Logo: skipi-logo-dark.svg in Nav, Hero und Footer
