@@ -7,7 +7,7 @@
 <!-- Primary SEO -->
 <title>Skipi – KI Photo Indexer für Motorsport-Fotografen | Automatisches Foto-Tagging</title>
 <meta name="description" content="Skipi ist der KI-gestützte Photo Indexer für Motorsport-Fotografen. Automatische Startnummern-Erkennung, Fahrerzuordnung und XMP-Metadaten – direkt im Browser, ohne Installation. Jetzt kostenlos testen.">
-<meta name="keywords" content="Motorsport Fotografie Software, KI Foto Tagging, Startnummern erkennen, JPEG Metadaten schreiben, XMP Export, Motorsport Bildverwaltung, Foto Indexer, Rennfotografie Tool, WEC Fotografie, Nürburgring Fotografie">
+<meta name="keywords" content="Motorsport Fotografie Software, KI Foto Tagging, Startnummern erkennen, JPEG Metadaten schreiben, XMP Export, Motorsport Bildverwaltung, Foto Indexer, Rennfotografie Tool, Motorsport Langstrecke, Rennstrecken Fotografie">
 <meta name="author" content="Axel Weichert Photography">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.skipi.cloud">
@@ -41,7 +41,7 @@
   "operatingSystem": "Web",
   "browserRequirements": "Requires JavaScript. Chrome recommended.",
   "url": "https://www.skipi.cloud",
-  "description": "Skipi ist ein KI-gestützter Photo Indexer für Motorsport-Fotografen. Die Software erkennt automatisch Startnummern auf Rennfahrzeugen, ordnet Fahrer per KI zu und schreibt Metadaten (XMP, IPTC) direkt in JPEG-Dateien. Unterstützt WEC, NLS, GTWC, DTM und weitere Rennserien.",
+  "description": "Skipi ist ein KI-gestützter Photo Indexer für Motorsport-Fotografen. Die Software erkennt automatisch Startnummern auf Rennfahrzeugen, ordnet Fahrer per KI zu und schreibt Metadaten (XMP, IPTC) direkt in JPEG-Dateien. Unterstützt GT-Serien, Langstrecken-Cups und weitere Rennserien.",
   "offers": [
     {
       "@type": "Offer",
@@ -88,7 +88,7 @@
     "KI-gestützte Startnummern-Erkennung (Google Vision OCR)",
     "Automatische Fahrerzuordnung via Starterlisten (PDF/CSV)",
     "XMP-Metadaten direkt in JPEG schreiben",
-    "Unterstützung für WEC, NLS, GTWC, DTM Starterlisten",
+    "Erweiterte Starterlisten-Parser für GT-Serien und Langstrecken-Cups",
     "Fahrer-Datenbank mit Referenzbildern",
     "Session-Automatik für Qualifying, Rennen, Training",
     "Farbmarkierungen und Flags",
@@ -546,7 +546,7 @@
       </div>
       <div style="padding:16px;background:#111">
         <div style="display:flex;gap:8px;margin-bottom:12px">
-          <div style="background:#1a1a1a;border:1px solid rgba(255,255,255,.08);border-radius:5px;padding:6px 12px;font-size:11px;color:#e85d04;font-family:'Century Gothic','AppleGothic','URW Gothic',Futura,'Trebuchet MS','Nunito Sans',sans-serif;font-weight:700">Red Bull Ring · DTM 2026</div>
+          <div style="background:#1a1a1a;border:1px solid rgba(255,255,255,.08);border-radius:5px;padding:6px 12px;font-size:11px;color:#e85d04;font-family:'Century Gothic','AppleGothic','URW Gothic',Futura,'Trebuchet MS','Nunito Sans',sans-serif;font-weight:700">Red Bull Ring · Motorsport 2026</div>
           <div style="margin-left:auto;background:#1e0a3c;border:1px solid #4c1d95;border-radius:5px;padding:6px 12px;font-size:11px;color:#a78bfa;font-weight:600">🔮 18 per KI analysieren</div>
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(60px,1fr));gap:6px">
@@ -595,7 +595,7 @@
       <div class="diff-item">
         <div class="diff-icon">📋</div>
         <div class="diff-title">PDF Starterliste</div>
-        <div class="diff-desc">DTM, ADAC GT Masters, GT4, Porsche Cup – PDF hochladen, alle Fahrer werden automatisch erkannt.</div>
+        <div class="diff-desc">GT-Serien, Langstrecken-Cups, Formel- und Markenpokale – PDF hochladen, alle Fahrer werden automatisch erkannt.</div>
         <div class="diff-tag">21+ Serien</div>
       </div>
       <div class="diff-item">
@@ -741,17 +741,17 @@
 <section id="serien">
   <div class="container">
     <div class="section-label">Unterstützte Serien</div>
-    <h2>Für alle ADAC<br>Rennserien optimiert</h2>
-    <p class="section-sub">Skipi liest PDF-Starterlisten aller ADAC-Serien automatisch aus – Strecke, Datum, Fahrer, Session-Zeiten, alles auf einen Schlag.</p>
+    <h2>Für alle deutschen<br>Rennserien optimiert</h2>
+    <p class="section-sub">Skipi liest PDF-Starterlisten aller großen deutschen und europäischen Rennserien automatisch aus – Strecke, Datum, Fahrer, Session-Zeiten, alles auf einen Schlag.</p>
     <div class="series-grid">
-      <div class="series-tag highlight">DTM</div>
-      <div class="series-tag highlight">ADAC GT Masters</div>
-      <div class="series-tag highlight">ADAC GT4 Germany</div>
+      <div class="series-tag highlight">GT-Serien</div>
+      <div class="series-tag highlight">Langstrecken-Cups</div>
+      <div class="series-tag highlight">GT4-Serien</div>
       <div class="series-tag highlight">Porsche Carrera Cup Deutschland</div>
       <div class="series-tag highlight">BMW M2 Cup</div>
       <div class="series-tag">GT World Challenge</div>
       <div class="series-tag">Nürburgring Langstrecken-Serie</div>
-      <div class="series-tag">ADAC Formula 4</div>
+      <div class="series-tag">Formel-Serien</div>
       <div class="series-tag">Weitere Gastserien</div>
       <div class="series-tag">CSV-Import für alle anderen</div>
     </div>
@@ -825,7 +825,7 @@
           <li>Farbmarkierungen &amp; Flags</li>
           <li>Fahrer-Datenbank</li>
           <li>KI Bildähnlichkeits-Matching (Vertex AI)</li>
-          <li>WEC, NLS, GTWC Starterlisten-Parser</li>
+          <li>Erweiterte Starterlisten-Parser (GT &amp; Langstrecke)</li>
         </ul>
         <a href="https://app.skipi.cloud/login" class="btn-pricing primary">Starten</a>
       </div>
@@ -844,7 +844,7 @@
           <li>Farbmarkierungen &amp; Flags</li>
           <li>Fahrer-Datenbank</li>
           <li>KI Bildähnlichkeits-Matching (Vertex AI)</li>
-          <li>WEC, NLS, GTWC Starterlisten-Parser</li>
+          <li>Erweiterte Starterlisten-Parser (GT &amp; Langstrecke)</li>
           <li>Premium Support (48h Antwortzeit)</li>
         </ul>
         <a href="https://app.skipi.cloud/login" class="btn-pricing outline">Starten</a>
@@ -892,7 +892,7 @@
           <span style="color:var(--orange);font-size:18px;flex-shrink:0;margin-left:12px">+</span>
         </summary>
         <div style="margin-top:12px;font-size:13px;color:var(--text2);line-height:1.7" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <span itemprop="text">Skipi ist ein KI-gestützter Photo Indexer speziell für Motorsport-Fotografen. Die Software automatisiert das manuelle Tagging von Rennfotos: KI erkennt Startnummern auf Fahrzeugen, ordnet Fahrer automatisch zu und schreibt Metadaten direkt in JPEG-Dateien. Skipi richtet sich an Freelance-Fotografen, Rennstreckenfotografen und Medienagenturen die regelmäßig Motorsport-Events covern – von Clubsport bis WEC und 24h Nürburgring.</span>
+          <span itemprop="text">Skipi ist ein KI-gestützter Photo Indexer speziell für Motorsport-Fotografen. Die Software automatisiert das manuelle Tagging von Rennfotos: KI erkennt Startnummern auf Fahrzeugen, ordnet Fahrer automatisch zu und schreibt Metadaten direkt in JPEG-Dateien. Skipi richtet sich an Freelance-Fotografen, Rennstreckenfotografen und Medienagenturen die regelmäßig Motorsport-Events covern – von Clubsport bis zu großen Langstrecken-Veranstaltungen.</span>
         </div>
       </details>
 
@@ -912,7 +912,7 @@
           <span style="color:var(--orange);font-size:18px;flex-shrink:0;margin-left:12px">+</span>
         </summary>
         <div style="margin-top:12px;font-size:13px;color:var(--text2);line-height:1.7" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <span itemprop="text">Skipi erkennt automatisch Starterlisten der FIA WEC (24h Le Mans, etc.), Nürburgring Langstrecken-Serie (NLS), GT World Challenge Europe (GTWC/FANATEC), 24h Nürburgring sowie generische PDF- und CSV-Starterlisten. Fahrernamen werden inkl. Co-Driver 1–3 importiert. Neue Serien können über CSV-Format manuell eingebunden werden.</span>
+          <span itemprop="text">Skipi erkennt automatisch Starterlisten der FIA GT-Serien, Langstrecken-Cups, 24h-Rennen sowie generische PDF- und CSV-Starterlisten. Fahrernamen werden inkl. Co-Driver 1–3 importiert. Neue Serien können über CSV-Format manuell eingebunden werden.</span>
         </div>
       </details>
 
@@ -922,7 +922,7 @@
           <span style="color:var(--orange);font-size:18px;flex-shrink:0;margin-left:12px">+</span>
         </summary>
         <div style="margin-top:12px;font-size:13px;color:var(--text2);line-height:1.7" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <span itemprop="text">1 Token = 1 vollständig analysiertes Foto (KI-OCR + Fahrerzuordnung). Als Richtwert: Ein Clubsport-Event benötigt 200–500 Token, ein NLS-Wochenende 500–1.500 Token, ein 24h-Rennen bis zu 8.000 Token. Der Premier-Plan mit 6.000 Token/Monat deckt die meisten Profi-Fotografen ab. Token verfallen am Monatsende – PowerUp-Pakete für zusätzliche Token sind jederzeit zubuchbar und 12 Monate gültig.</span>
+          <span itemprop="text">1 Token = 1 vollständig analysiertes Foto (KI-OCR + Fahrerzuordnung). Als Richtwert: Ein Clubsport-Event benötigt 200–500 Token, ein Langstrecken-Wochenende 500–1.500 Token, ein 24h-Rennen bis zu 8.000 Token. Der Premier-Plan mit 6.000 Token/Monat deckt die meisten Profi-Fotografen ab. Token verfallen am Monatsende – PowerUp-Pakete für zusätzliche Token sind jederzeit zubuchbar und 12 Monate gültig.</span>
         </div>
       </details>
 
@@ -966,7 +966,7 @@
       "mainEntity": [
         {"@type":"Question","name":"Was ist Skipi und für wen ist es gedacht?","acceptedAnswer":{"@type":"Answer","text":"Skipi ist ein KI-gestützter Photo Indexer für Motorsport-Fotografen. Die Software automatisiert das Tagging von Rennfotos durch KI-Startnummern-Erkennung und automatische Fahrerzuordnung."}},
         {"@type":"Question","name":"Wie funktioniert die automatische Startnummern-Erkennung?","acceptedAnswer":{"@type":"Answer","text":"Skipi nutzt Google Cloud Vision API (OCR) um Startnummern auf Fahrzeugen zu erkennen und mit importierten Starterlisten abzugleichen. Genauigkeit über 95% bei klar lesbaren Nummern."}},
-        {"@type":"Question","name":"Welche Rennserien werden unterstützt?","acceptedAnswer":{"@type":"Answer","text":"WEC, NLS, GT World Challenge Europe (GTWC), 24h Nürburgring sowie generische PDF- und CSV-Starterlisten."}},
+        {"@type":"Question","name":"Welche Rennserien werden unterstützt?","acceptedAnswer":{"@type":"Answer","text":"GT-Serien, Langstrecken-Cups, 24h-Rennen sowie generische PDF- und CSV-Starterlisten."}},
         {"@type":"Question","name":"Was ist ein Token?","acceptedAnswer":{"@type":"Answer","text":"1 Token = 1 vollständig analysiertes Foto. Pro Event werden je nach Größe 200–8.000 Token benötigt."}},
         {"@type":"Question","name":"Muss ich eine Software installieren?","acceptedAnswer":{"@type":"Answer","text":"Nein. Skipi läuft vollständig im Browser, kein Download oder Installation nötig. Chrome empfohlen."}}
       ]
