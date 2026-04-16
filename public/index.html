@@ -376,6 +376,7 @@
 
   /* ── PRICING ── */
   .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .pricing-grid-4 { grid-template-columns: repeat(4, 1fr); }
   .pricing-card {
     background: var(--dark2); border: 1px solid var(--border);
     border-radius: 8px; padding: 36px 32px;
@@ -446,6 +447,7 @@
   .footer-links a:hover { color: var(--text2); }
 
   /* ── RESPONSIVE ── */
+  /* ── Tablet ── */
   @media (max-width: 900px) {
     nav { padding: 0 24px; }
     .nav-links { display: none; }
@@ -456,8 +458,35 @@
     .features-grid { grid-template-columns: 1fr; }
     .feature-card.wide { grid-column: span 1; grid-template-columns: 1fr; }
     .workflow-compare { grid-template-columns: 1fr; }
-    .pricing-grid { grid-template-columns: 1fr; }
+    .pricing-grid { grid-template-columns: 1fr 1fr !important; }
     .diff-grid { grid-template-columns: 1fr 1fr; }
+    footer { flex-direction: column; gap: 16px; text-align: center; padding: 40px 24px; }
+    .footer-links { justify-content: center; flex-wrap: wrap; }
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 600px) {
+    nav { padding: 0 16px; height: 56px; }
+    .nav-cta { padding: 8px 14px; font-size: 13px; }
+    h1 { font-size: 34px; line-height: 1.2; }
+    h2 { font-size: 28px; }
+    .hero { padding: 80px 16px 48px; }
+    .hero p { font-size: 15px; }
+    .hero-actions { flex-direction: column; align-items: center; }
+    .hero-actions a { width: 100%; text-align: center; }
+    .hero-stats { gap: 24px; }
+    section { padding: 48px 16px; }
+    .section-sub { font-size: 14px; }
+    .pricing-grid { grid-template-columns: 1fr !important; }
+    .diff-grid { grid-template-columns: 1fr; }
+    .screen-content { grid-template-columns: 1fr 1fr; }
+    .series-grid { gap: 8px; }
+    .cta-section { padding: 48px 16px; }
+    .cta-section h2 { font-size: 28px; }
+    footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 16px; }
+    .footer-links { justify-content: center; flex-wrap: wrap; gap: 16px; }
+    details { padding: 16px; }
+    details summary { font-size: 14px; }
   }
 </style>
 </head>
@@ -520,7 +549,7 @@
           <div style="background:#1a1a1a;border:1px solid rgba(255,255,255,.08);border-radius:5px;padding:6px 12px;font-size:11px;color:#e85d04;font-family:'Century Gothic','AppleGothic','URW Gothic',Futura,'Trebuchet MS','Nunito Sans',sans-serif;font-weight:700">Red Bull Ring · DTM 2026</div>
           <div style="margin-left:auto;background:#1e0a3c;border:1px solid #4c1d95;border-radius:5px;padding:6px 12px;font-size:11px;color:#a78bfa;font-weight:600">🔮 18 per KI analysieren</div>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(60px,1fr));gap:6px">
           <div style="aspect-ratio:3/2;background:#1a1a1a;border-radius:5px;border:1px solid rgba(255,255,255,.06);position:relative;display:flex;align-items:center;justify-content:center">
             <div style="position:absolute;top:4px;right:4px;background:rgba(232,93,4,.9);color:#fff;font-size:8px;font-weight:700;padding:2px 5px;border-radius:2px">#91 Preining</div>
             <div style="position:absolute;bottom:4px;right:4px;width:7px;height:7px;border-radius:50%;background:#22c55e"></div>
@@ -737,7 +766,7 @@
     <p class="section-sub">Monatlich kündbar. Keine versteckten Kosten. Starte kostenlos mit 100 Token.</p>
 
     <!-- Tryout Banner -->
-    <div style="background:rgba(232,93,4,.08);border:1px solid rgba(232,93,4,.2);border-radius:12px;padding:20px 28px;margin-bottom:32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+    <div style="background:rgba(232,93,4,.08);border:1px solid rgba(232,93,4,.2);border-radius:12px;padding:20px 28px;margin-bottom:32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
       <div>
         <div style="font-size:16px;font-weight:800;margin-bottom:4px">Kostenlos testen</div>
         <div style="font-size:13px;color:var(--text2)">Registriere dich und erhalte sofort 100 Token gratis. Keine Kreditkarte nötig.</div>
@@ -745,7 +774,7 @@
       <a href="https://app.skipi.cloud/login" class="btn-pricing primary" style="white-space:nowrap">Jetzt kostenlos starten →</a>
     </div>
 
-    <div class="pricing-grid" style="grid-template-columns:repeat(4,1fr)">
+    <div class="pricing-grid pricing-grid-4">
 
       <div class="pricing-card">
         <div class="pricing-name">Essentials</div>
@@ -824,7 +853,7 @@
     <div style="margin-top:32px;text-align:center;padding:24px;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px">
       <div style="font-size:14px;font-weight:700;margin-bottom:8px">Mehr Token benötigt?</div>
       <div style="font-size:13px;color:var(--text2);margin-bottom:16px">Token-Pakete können jederzeit dazu gebucht werden und verfallen nach 12 Monaten.</div>
-      <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap">
+      <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;padding:0 8px">
         <div style="padding:12px 20px;background:var(--dark1);border:1px solid var(--border);border-radius:8px;font-size:12px">
           <div style="font-weight:800;font-size:15px;color:var(--orange)">5 €</div>
           <div style="color:var(--text2)">500 Token</div>
