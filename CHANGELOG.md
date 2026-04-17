@@ -1,5 +1,10 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.22] – 2026-04-17
+- i18n: Vollständige Übersetzung aller 6 Sprachen (DE/EN/FR/IT/ES/PT)
+- i18n: 118 übersetzte Elemente auf der gesamten Seite
+- i18n: Dropdown-Bug behoben
+
 ## [1.3.21] – 2026-04-17
 - SEO: AggregateRating 4.9/5 Schema hinzugefügt
 - SEO: Sitemap-Datum aktualisiert
