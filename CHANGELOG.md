@@ -1,5 +1,8 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.16] – 2026-04-17
+- BUGFIX: Light Mode Logo – dunkler Hintergrund statt blauer Filter (CI erhalten)
+
 ## [1.3.15] – 2026-04-17
 - Light Mode: skipi-Logo in schwarz dargestellt (CSS filter invert+hue-rotate)
 
