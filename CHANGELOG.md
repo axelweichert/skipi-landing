@@ -1,5 +1,8 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.12] – 2026-04-17
+- BUGFIX: Empfohlen-Badge pulsiert jetzt sichtbar (scale+color statt box-shadow)
+
 ## [1.3.11] – 2026-04-17
 - UI: Alle Serien-Tags orange (nicht nur ausgewählte)
 - UI: Empfohlen-Badge pulsiert orange
