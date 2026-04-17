@@ -390,11 +390,13 @@
     border-color: var(--orange);
     background: linear-gradient(135deg, rgba(232,93,4,.08) 0%, var(--dark2) 60%);
   }
+  @keyframes pulse-orange { 0%,100%{box-shadow:0 0 0 0 rgba(232,93,4,.6)} 50%{box-shadow:0 0 0 7px rgba(232,93,4,0)} }
   .pricing-popular {
     position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
     background: var(--orange); color: #fff;
     font-size: 11px; font-weight: 800; padding: 4px 14px; border-radius: 20px;
     letter-spacing: .05em; text-transform: uppercase;
+    animation: pulse-orange 2s ease-in-out infinite;
   }
   .pricing-name { font-family: 'Century Gothic','Apple Gothic','URW Gothic',Futura,'Trebuchet MS','Nunito Sans',sans-serif; font-size: 20px; font-weight: 800; margin-bottom: 8px; }
   .pricing-price {
@@ -751,12 +753,12 @@
       <div class="series-tag highlight">Nürburgring Langstrecken-Serie</div>
       <div class="series-tag highlight">GT World Challenge Europe</div>
       <div class="series-tag highlight">Deutsche Bergmeisterschaft</div>
-      <div class="series-tag">DTM</div>
-      <div class="series-tag">ADAC GT Masters</div>
-      <div class="series-tag">Porsche Carrera Cup</div>
-      <div class="series-tag">BMW M2 Cup</div>
-      <div class="series-tag">24h Nürburgring</div>
-      <div class="series-tag">CSV-Import für alle anderen</div>
+      <div class="series-tag highlight">DTM</div>
+      <div class="series-tag highlight">ADAC GT Masters</div>
+      <div class="series-tag highlight">Porsche Carrera Cup</div>
+      <div class="series-tag highlight">BMW M2 Cup</div>
+      <div class="series-tag highlight">24h Nürburgring</div>
+      <div class="series-tag highlight">CSV-Import für alle anderen</div>
     </div>
   </div>
 </section>

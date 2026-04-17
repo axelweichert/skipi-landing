@@ -1,5 +1,9 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.11] – 2026-04-17
+- UI: Alle Serien-Tags orange (nicht nur ausgewählte)
+- UI: Empfohlen-Badge pulsiert orange
+
 ## [1.3.10] – 2026-04-17
 - Pricing: Agency-Banner ebenfalls anklickbar und auswählbar
 
