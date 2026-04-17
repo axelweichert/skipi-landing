@@ -1,5 +1,8 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.23] – 2026-04-18
+- NEU: Security-Sektion "Performance, Sicherheit & Datenschutz" mit Cloudflare-Stats (400+ TBps, 330+ PoPs, 13.000+ Netzwerke) und Zertifizierungs-Badges (BSI C5, DSGVO, ISO 27001, SOC 2 Type II, EU Data Localization Suite)
+
 ## [1.3.22] – 2026-04-17
 - i18n: Vollständige Übersetzung aller 6 Sprachen (DE/EN/FR/IT/ES/PT)
 - i18n: 118 übersetzte Elemente auf der gesamten Seite
