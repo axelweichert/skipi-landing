@@ -1,7 +1,7 @@
 # Changelog – Skipi Landing Page
 
-## [1.3.23] – 2026-04-18
-- NEU: Security-Sektion "Performance, Sicherheit & Datenschutz" mit Cloudflare-Stats (400+ TBps, 330+ PoPs, 13.000+ Netzwerke) und Zertifizierungs-Badges (BSI C5, DSGVO, ISO 27001, SOC 2 Type II, EU Data Localization Suite)
+## [1.3.24] – 2026-04-18
+- FIX: Security-Sektion: Orange statt Blau als Akzentfarbe, nur 2 Stat-Karten (400+ TBps + &lt;2ms Latenz), 330+ und 13.000+ entfernt
 
 ## [1.3.22] – 2026-04-17
 - i18n: Vollständige Übersetzung aller 6 Sprachen (DE/EN/FR/IT/ES/PT)
