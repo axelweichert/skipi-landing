@@ -1,5 +1,8 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.18] – 2026-04-17
+- Tech-Stack anonymisiert: Google Vision/Vertex AI → OptiMatch AI / SuperMatch AI
+
 ## [1.3.17] – 2026-04-17
 - Light Mode Logo: zurück zu filter invert+hue-rotate
 
