@@ -1,5 +1,8 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.14] – 2026-04-17
+- NEU: Dark/Light Mode Toggle in der Navigation
+
 ## [1.3.13] – 2026-04-17
 - UI: Premier-Karte pulsiert als ganzes Feld (orange Glow-Animation)
 

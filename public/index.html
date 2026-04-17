@@ -134,6 +134,28 @@
     --text3: #555;
     --green: #22c55e;
   }
+  [data-theme="light"] {
+    --dark: #f5f5f5;
+    --dark2: #ffffff;
+    --dark3: #ebebeb;
+    --dark4: #e0e0e0;
+    --border: rgba(0,0,0,.1);
+    --text: #111111;
+    --text2: #555;
+    --text3: #999;
+  }
+  [data-theme="light"] body { background: var(--dark); }
+  [data-theme="light"] nav { background: rgba(245,245,245,.92); border-color: rgba(0,0,0,.08); }
+  [data-theme="light"] .nav-links a { color: var(--text2); }
+  [data-theme="light"] .nav-links a:hover { color: #111; }
+  [data-theme="light"] .hero-section { background: #f5f5f5; }
+  [data-theme="light"] .hero-section::before { background-image: linear-gradient(rgba(0,0,0,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,.06) 1px, transparent 1px); }
+  .theme-toggle-btn {
+    background: none; border: 1px solid var(--border); border-radius: 20px;
+    padding: 5px 10px; cursor: pointer; font-size: 14px; line-height: 1;
+    color: var(--text2); transition: all .2s; white-space: nowrap;
+  }
+  .theme-toggle-btn:hover { border-color: var(--orange); color: var(--orange); }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -507,6 +529,7 @@
     <a href="#workflow">Workflow</a>
     <a href="#serien">Serien</a>
     <a href="#pricing">Preise</a>
+    <button class="theme-toggle-btn" id="themeToggle" title="Dark/Light Mode wechseln">🌙</button>
     <a href="https://app.skipi.cloud" class="nav-cta">App öffnen →</a>
   </div>
 </nav>
@@ -1080,6 +1103,22 @@
       if (agencyBtn) agencyBtn.textContent = 'Agency wählen →';
     });
   }
+})();
+</script>
+<script>
+(function(){
+  var btn = document.getElementById('themeToggle');
+  var html = document.documentElement;
+  var stored = localStorage.getItem('skipi-landing-theme') || 'dark';
+  html.setAttribute('data-theme', stored);
+  btn.textContent = stored === 'dark' ? '☀️' : '🌙';
+  btn.addEventListener('click', function(){
+    var current = html.getAttribute('data-theme');
+    var next = current === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('skipi-landing-theme', next);
+    btn.textContent = next === 'dark' ? '☀️' : '🌙';
+  });
 })();
 </script>
 </body>
