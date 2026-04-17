@@ -382,7 +382,10 @@
     border-radius: 8px; padding: 36px 32px;
     position: relative; transition: transform .2s;
   }
-  .pricing-card:hover { transform: translateY(-4px); }
+  .pricing-card { cursor: pointer; }
+  .pricing-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(0,0,0,.3); }
+  .pricing-card.selected { border-color: var(--orange); background: linear-gradient(135deg, rgba(232,93,4,.1) 0%, var(--dark2) 60%); transform: translateY(-4px); box-shadow: 0 0 0 2px rgba(232,93,4,.4); }
+  .pricing-card.selected .btn-pricing.outline { background: var(--orange); color: #fff; border-color: var(--orange); }
   .pricing-card.featured {
     border-color: var(--orange);
     background: linear-gradient(135deg, rgba(232,93,4,.08) 0%, var(--dark2) 60%);
@@ -794,7 +797,7 @@
         <a href="https://app.skipi.cloud/login?plan=essentials" class="btn-pricing outline">Starten</a>
       </div>
 
-      <div class="pricing-card">
+      <div class="pricing-card" data-plan="advanced">
         <div class="pricing-name">Advanced</div>
         <div class="pricing-price"><sup>€</sup>19</div>
         <div class="pricing-period">pro Monat</div>
@@ -811,7 +814,7 @@
         <a href="https://app.skipi.cloud/login?plan=advanced" class="btn-pricing outline">Starten</a>
       </div>
 
-      <div class="pricing-card featured">
+      <div class="pricing-card featured" data-plan="premier">
         <div class="pricing-popular">Empfohlen</div>
         <div class="pricing-name">Premier</div>
         <div class="pricing-price"><sup>€</sup>39</div>
@@ -831,7 +834,7 @@
         <a href="https://app.skipi.cloud/login?plan=premier" class="btn-pricing primary">Starten</a>
       </div>
 
-      <div class="pricing-card">
+      <div class="pricing-card" data-plan="unlimited">
         <div class="pricing-name">Unlimited</div>
         <div class="pricing-price"><sup>€</sup>89</div>
         <div class="pricing-period">pro Monat</div>
@@ -1022,5 +1025,33 @@
   </div>
 </footer>
 
+
+<script>
+// Pricing card click-to-select
+(function() {
+  var cards = document.querySelectorAll('.pricing-card[data-plan]');
+  cards.forEach(function(card) {
+    card.addEventListener('click', function(e) {
+      // Don't interfere with direct button clicks
+      if (e.target.tagName === 'A') return;
+      // Deselect all
+      cards.forEach(function(c) {
+        c.classList.remove('selected');
+        // Reset featured card button
+        var btn = c.querySelector('.btn-pricing');
+        if (btn && c.classList.contains('featured')) btn.classList.add('primary');
+      });
+      // Select clicked
+      card.classList.add('selected');
+      // Update button style to orange for selected
+      var btn = card.querySelector('.btn-pricing');
+      if (btn) { btn.classList.remove('outline'); btn.classList.add('primary'); }
+      // Show plan name in button
+      var planName = card.querySelector('.pricing-name').textContent;
+      if (btn) btn.textContent = planName + ' wählen →';
+    });
+  });
+})();
+</script>
 </body>
 </html>

@@ -1,5 +1,8 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.9] – 2026-04-17
+- Pricing: Karten sind anklickbar – Klick markiert Plan mit orangem Rahmen und ändert Button auf orange
+
 ## [1.3.8] – 2026-04-17
 - Pricing: Agency als Enterprise-Banner unter den 4 Standard-Karten
 
