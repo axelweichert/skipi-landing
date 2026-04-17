@@ -857,7 +857,7 @@
     </div>
 
     <!-- Agency – Enterprise-Leiste -->
-    <div style="margin-top:24px;background:linear-gradient(135deg,rgba(232,93,4,.08) 0%,rgba(232,93,4,.04) 100%);border:1px solid rgba(232,93,4,.25);border-radius:16px;padding:32px 40px;display:flex;align-items:center;gap:40px;flex-wrap:wrap;">
+    <div id="agency-banner" data-plan="agency" style="margin-top:24px;background:linear-gradient(135deg,rgba(232,93,4,.08) 0%,rgba(232,93,4,.04) 100%);border:1px solid rgba(232,93,4,.25);border-radius:16px;padding:32px 40px;display:flex;align-items:center;gap:40px;flex-wrap:wrap;cursor:pointer;transition:box-shadow .2s,border-color .2s;">
       <div style="flex:0 0 auto;">
         <div style="font-family:'Century Gothic','Apple Gothic',Futura,sans-serif;font-size:22px;font-weight:800;margin-bottom:4px;">Agency</div>
         <div style="font-size:48px;font-weight:900;line-height:1;color:var(--orange);">€<span>199</span></div>
@@ -1030,27 +1030,52 @@
 // Pricing card click-to-select
 (function() {
   var cards = document.querySelectorAll('.pricing-card[data-plan]');
+  var agencyBanner = document.getElementById('agency-banner');
+  var agencyBtn = agencyBanner ? agencyBanner.querySelector('a') : null;
+  var agencyBtnOrigText = agencyBtn ? agencyBtn.textContent : '';
+
+  function deselectAll() {
+    cards.forEach(function(c) {
+      c.classList.remove('selected');
+      var btn = c.querySelector('.btn-pricing');
+      if (!btn) return;
+      if (c.classList.contains('featured')) {
+        btn.classList.add('primary'); btn.classList.remove('outline');
+        btn.textContent = 'Starten';
+      } else {
+        btn.classList.add('outline'); btn.classList.remove('primary');
+        btn.textContent = 'Starten';
+      }
+    });
+    if (agencyBanner) {
+      agencyBanner.style.borderColor = 'rgba(232,93,4,.25)';
+      agencyBanner.style.boxShadow = 'none';
+      if (agencyBtn) agencyBtn.textContent = agencyBtnOrigText;
+    }
+  }
+
   cards.forEach(function(card) {
     card.addEventListener('click', function(e) {
-      // Don't interfere with direct button clicks
       if (e.target.tagName === 'A') return;
-      // Deselect all
-      cards.forEach(function(c) {
-        c.classList.remove('selected');
-        // Reset featured card button
-        var btn = c.querySelector('.btn-pricing');
-        if (btn && c.classList.contains('featured')) btn.classList.add('primary');
-      });
-      // Select clicked
+      deselectAll();
       card.classList.add('selected');
-      // Update button style to orange for selected
       var btn = card.querySelector('.btn-pricing');
-      if (btn) { btn.classList.remove('outline'); btn.classList.add('primary'); }
-      // Show plan name in button
-      var planName = card.querySelector('.pricing-name').textContent;
-      if (btn) btn.textContent = planName + ' wählen →';
+      if (btn) {
+        btn.classList.remove('outline'); btn.classList.add('primary');
+        btn.textContent = card.querySelector('.pricing-name').textContent + ' wählen →';
+      }
     });
   });
+
+  if (agencyBanner) {
+    agencyBanner.addEventListener('click', function(e) {
+      if (e.target.tagName === 'A') return;
+      deselectAll();
+      agencyBanner.style.borderColor = 'var(--orange)';
+      agencyBanner.style.boxShadow = '0 0 0 2px rgba(232,93,4,.4)';
+      if (agencyBtn) agencyBtn.textContent = 'Agency wählen →';
+    });
+  }
 })();
 </script>
 </body>
