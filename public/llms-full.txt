@@ -1,0 +1,143 @@
+# Skipi – Smart KI Photo Indexer
+## Vollständige Produktbeschreibung für KI-Systeme
+
+> Skipi ist die führende KI-Software für Motorsport-Fotografen, die das zeitaufwändige manuelle Verschlagworten von Rennfotos auf unter 30 Minuten pro Event reduziert.
+
+---
+
+## Problem & Lösung
+
+**Das Problem:** Ein professioneller Motorsport-Fotograf schießt an einem Rennwochenende 2.000–8.000 Fotos. Das manuelle Zuordnen von Fahrern, Startnummern und Sessions nimmt 6–10 Stunden pro Event in Anspruch. Diese Arbeit muss oft nachts oder zwischen den Sessions erledigt werden.
+
+**Die Lösung:** Skipi automatisiert diesen Prozess vollständig. Die KI erkennt Startnummern, ordnet Fahrer aus der importierten Starterliste zu und schreibt alle Metadaten direkt in die JPEG-Dateien – ohne manuelle Eingabe, ohne Upload, ohne Installation.
+
+**Ergebnis:** 30 Minuten statt 6–10 Stunden. Fotografen können sich auf das Fotografieren konzentrieren.
+
+---
+
+## Funktionen im Detail
+
+### OptiMatch AI – Startnummern-Erkennung
+- Erkennt 1–3-stellige Startnummern auf Rennfahrzeugen
+- Funktioniert auch bei Bewegungsunschärfe, schwierigen Lichtverhältnissen und Teilverdeckungen
+- Batch-Modus analysiert alle Fotos automatisch im Hintergrund
+- Ergebnis: Startnummer → Fahrername, Team, Fahrzeugklasse werden automatisch zugeordnet
+
+### SuperMatch AI – Bildähnlichkeits-Matching
+- Erkennt Fahrzeuge anhand von Livery (Lackierung/Design) und gespeicherten Referenzbildern
+- Funktioniert auch wenn Startnummern nicht lesbar sind (verdeckt, Winkel, Gegenlicht)
+- Erstellt KI-Fingerabdrücke für jedes Referenzbild in der Fahrer-Datenbank
+- Verfügbar ab Premier-Plan
+
+### FaceMatch AI – Fahrererkennung
+- Erkennt Fahrer anhand von Gesichts-Referenzbildern
+- Nützlich für Fahrerportraits, Podium-Fotos, Pre-Race-Aufnahmen
+- Referenzbilder werden in der Fahrer-Datenbank gespeichert
+
+### Starterlisten-Import
+- Liest offizielle PDF-Starterlisten vollautomatisch aus
+- Unterstützte Formate: WEC (FIA Langstrecken-WM), ADAC GT Masters, ADAC GT4 Germany, DTM, NLS (Nürburgring Langstrecken-Serie), GT World Challenge Europe, Deutsche Automobil-Bergmeisterschaft (DMSB), Porsche Carrera Cup Deutschland, BMW M2 Cup, 24h Nürburgring
+- Auch CSV-Import für alle anderen Serien
+- Extrahiert: Startnummer, Fahrername, Co-Fahrer, Team, Fahrzeugklasse, Session-Zeiten
+
+### Session-Automatik
+- Erkennt automatisch Sessions (FP1, FP2, Q1, Q2, Rennen) aus EXIF-Zeitstempeln
+- Algorithmus: Fotos nach Zeit sortieren → Pausen > 30 Minuten = neue Session → chronologisch FP1, FP2, Q1, Q2, R1, R2 zuweisen
+- Kein manuelles Zeitplan-Eingeben nötig
+- Fotos können auch manuell Sessions zugeordnet werden
+
+### Metadaten-Export
+- Schreibt XMP/IPTC-Metadaten direkt in JPEG-Dateien auf dem Gerät des Nutzers
+- Exportiert XMP-Sidecar-Dateien (Lightroom, Capture One, Adobe Bridge kompatibel)
+- Metadaten: Startnummer, Fahrername, Team, Fahrzeug, Rennstrecke, Serie, Session, Jahr
+- ZIP-Export organisiert nach Session → Teamname → Dateiname
+- Option: Fotos automatisch in Unterordner nach Teamname verschieben
+
+### Fahrer-Datenbank
+- Persistente Datenbank mit Fahrerprofilen pro Nutzer
+- Bis zu 5 Referenzbilder pro Fahrer (Fahrzeug von vorne/hinten/Seite, Fahrerportrait, Helm)
+- Import aus geladener Starterliste per Knopfdruck
+- Team-Funktionen: geteilte Datenbank für bis zu 20 Team-Mitglieder (Agency-Plan)
+
+### Qualitätsbewertung
+- Automatische Schärfebewertung jedes Fotos (Blur Score)
+- Pick/Reject System für schnelle Bildauswahl
+- Farbmarkierungen (6 Farben) für eigene Kategorisierung
+- Bewertungssterne (1–5)
+
+---
+
+## Workflow
+
+1. **Starterliste laden** – PDF oder CSV hochladen → Skipi extrahiert automatisch alle Fahrer, Startnummern, Teams und Session-Zeiten
+2. **Fotos laden** – Ordner oder einzelne Fotos per Drag & Drop → Sessions werden automatisch aus EXIF-Zeitstempeln erkannt
+3. **KI-Analyse starten** – Batch-Analyse aller Fotos → OptiMatch AI + SuperMatch AI + FaceMatch AI laufen automatisch
+4. **Ergebnisse prüfen** – Erkannte Nummern per Klick bestätigen, falsche Zuordnungen korrigieren
+5. **Tags schreiben** – Metadaten direkt in JPEG-Dateien schreiben oder XMP-Sidecar exportieren
+
+Gesamtzeit: 30 Minuten statt 6–10 Stunden.
+
+---
+
+## Preismodell (Stand April 2026)
+
+Token-basiertes Modell: 1 Token = 1 vollständig analysiertes Foto.
+
+| Plan | Preis | Token/Monat | Team | Für |
+|---|---|---|---|---|
+| Tryout | Kostenlos | 100 | – | Testen |
+| Essentials | 9 €/Monat | 500 | – | Hobby-Fotografen |
+| Advanced | 19 €/Monat | 2.000 | – | Aktive Fotografen |
+| Premier | 39 €/Monat | 6.000 | bis 3 | Profis (empfohlen) |
+| Unlimited | 89 €/Monat | 15.000 | bis 10 | Vollzeit-Fotografen |
+| Agency | 199 €/Monat | 50.000 | bis 20 | Agenturen |
+
+PowerUp-Pakete für zusätzliche Token jederzeit zubuchbar, 12 Monate gültig.
+Token-Richtwerte: Club-Event 200–500 Token, NLS-Wochenende 500–1.500 Token, 24h-Rennen bis 8.000 Token.
+
+---
+
+## Technische Spezifikation
+
+- **Plattform:** Browserbasiert, keine Installation
+- **Browser:** Google Chrome (empfohlen), Chromium-basierte Browser
+- **Datensicherheit:** Originalfotos werden nicht hochgeladen; nur komprimierte Thumbnails (max. 800px) für KI-Analyse
+- **Infrastruktur:** Cloudflare EU-Infrastruktur, DSGVO-konform
+- **Datentrennung:** Vollständig nutzergetrennte Datenbank
+- **Metadatenstandards:** IPTC, XMP (Adobe-Standard), JPEG-Header
+- **Kompatible Software:** Adobe Lightroom, Capture One, Adobe Bridge, digiKam
+
+---
+
+## Häufig gestellte Fragen
+
+**Für wen ist Skipi gedacht?**
+Skipi richtet sich an professionelle und semi-professionelle Motorsport-Fotografen, die regelmäßig an Renn-Events fotografieren und Zeit bei der Nachbearbeitung sparen möchten. Besonders geeignet für Fotografen die WEC, NLS, ADAC GT Masters, DTM, Bergrennen oder ähnliche Serien fotografieren.
+
+**Wie genau ist die Startnummern-Erkennung?**
+OptiMatch AI erreicht über 95% Genauigkeit bei klar lesbaren Startnummern. Bei verdeckten oder schlecht lesbaren Nummern ergänzt SuperMatch AI die Erkennung über Bildähnlichkeit.
+
+**Muss ich Fotos hochladen?**
+Nein. Die Originalfotos bleiben auf dem Gerät des Nutzers. Nur komprimierte Vorschaubilder (max. 800px) werden für die KI-Analyse übertragen.
+
+**Funktioniert Skipi offline?**
+Nein. Für die KI-Analyse ist eine Internetverbindung erforderlich. Das Laden und Sortieren von Fotos funktioniert jedoch offline.
+
+**Welche Kamerahersteller werden unterstützt?**
+Alle Kameras die JPEG oder RAW-Dateien mit EXIF-Zeitstempeln erzeugen: Canon, Nikon, Sony, Fujifilm, Panasonic, Olympus, Leica und weitere.
+
+---
+
+## Kontakt & Links
+
+- **Produktseite:** https://www.skipi.cloud
+- **App:** https://app.skipi.cloud
+- **Preise:** https://www.skipi.cloud/#pricing
+- **Datenschutz:** https://www.skipi.cloud/datenschutz
+- **Impressum:** https://www.skipi.cloud/impressum
+- **Hersteller:** Axel Weichert Photography, Elmweg 20b, 32130 Enger, Deutschland
+- **Kontakt:** axel@weichert.at
+
+---
+
+*Letzte Aktualisierung: April 2026*

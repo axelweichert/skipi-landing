@@ -3,7 +3,7 @@ Allow: /
 
 Sitemap: https://www.skipi.cloud/sitemap.xml
 
-# AI Crawlers
+# AI Crawlers – explicitly allowed
 User-agent: GPTBot
 Allow: /
 
@@ -16,5 +16,6 @@ Allow: /
 User-agent: Googlebot
 Allow: /
 
-# GEO
+# GEO – Generative Engine Optimization
 LLMs: https://www.skipi.cloud/llms.txt
+LLMs-Full: https://www.skipi.cloud/llms-full.txt

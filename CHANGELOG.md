@@ -1,5 +1,13 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.21] – 2026-04-17
+- SEO: AggregateRating 4.9/5 Schema hinzugefügt
+- SEO: Sitemap-Datum aktualisiert
+- SEO: FAQ-Schema von 5 auf 9 Fragen erweitert
+- GEO: llms-full.txt angelegt (vollständige Produktbeschreibung)
+- i18n: Sprachauswahl DE/EN/FR/IT/ES/PT mit Flaggen-Dropdown
+- i18n: Erkennt automatisch Browsersprache, speichert Auswahl
+
 ## [1.3.20] – 2026-04-17
 - GEO: llms.txt angelegt (ChatGPT, Claude, Perplexity)
 - robots.txt: AI-Crawler explizit erlaubt + llms.txt Referenz

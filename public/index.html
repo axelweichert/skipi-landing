@@ -35,6 +35,13 @@
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "18",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
   "name": "Skipi",
   "alternateName": "Skipi Smart KI Photo Indexer",
   "applicationCategory": "PhotographyApplication",
@@ -518,6 +525,9 @@
     details { padding: 16px; }
     details summary { font-size: 14px; }
   }
+  .lang-item { display:flex; align-items:center; gap:8px; padding:7px 12px; border-radius:6px; cursor:pointer; font-size:13px; color:var(--text); white-space:nowrap; transition:background .15s; background:none; border:none; width:100%; text-align:left; font-family:inherit; }
+  .lang-item:hover { background:var(--dark3); }
+  .lang-item.active { color:var(--orange); font-weight:700; }
 </style>
 </head>
 <body>
@@ -526,12 +536,19 @@
 <nav>
   <div class="nav-logo"><img src="/skipi-logo-dark.svg" alt="Skipi" style="height:32px;width:auto"></div>
   <div class="nav-links">
-    <a href="#features">Features</a>
-    <a href="#workflow">Workflow</a>
-    <a href="#serien">Serien</a>
-    <a href="#pricing">Preise</a>
+    <a href="#features" data-i18n="nav.features">Features</a>
+    <a href="#workflow" data-i18n="nav.workflow">Workflow</a>
+    <a href="#serien" data-i18n="nav.series">Serien</a>
+    <a href="#pricing" data-i18n="nav.pricing">Preise</a>
+    <div class="lang-switcher" id="langSwitcher" style="position:relative;display:inline-flex;align-items:center">
+      <button class="theme-toggle-btn" id="langToggleBtn" style="gap:4px" title="Sprache wählen / Select language">
+        <span id="langFlag">🇩🇪</span><span id="langCode" style="font-size:11px;font-weight:700">DE</span>
+      </button>
+      <div id="langDropdown" style="display:none;position:absolute;top:calc(100% + 6px);right:0;background:var(--dark2);border:1px solid var(--border);border-radius:8px;padding:4px;min-width:110px;z-index:999;box-shadow:0 8px 24px rgba(0,0,0,.3)">
+      </div>
+    </div>
     <button class="theme-toggle-btn" id="themeToggle" title="Dark/Light Mode wechseln">🌙</button>
-    <a href="https://app.skipi.cloud" class="nav-cta">App öffnen →</a>
+    <a href="https://app.skipi.cloud" class="nav-cta" data-i18n="nav.cta">App öffnen →</a>
   </div>
 </nav>
 
@@ -543,14 +560,14 @@
     <div style="margin-bottom:32px;text-align:center">
         <img src="/skipi-logo-dark.svg" alt="Skipi" style="height:240px;width:auto">
       </div>
-      <div class="hero-badge">Neu: SuperMatch AI Bilderkennung</div>
-    <h1>Weniger manuell taggen.<br><em>Mehr shooten.</em></h1>
+      <div class="hero-badge"><span data-i18n="hero.badge">Neu: SuperMatch AI Bilderkennung</span></div>
+    <h1 data-i18n-html="hero.h1">Weniger manuell taggen.<br><em>Mehr shooten.</em></h1>
     <p class="hero-sub">
       Skipi ist der <strong>intelligente Foto-Assistent für Motorsport-Fotografen</strong>. KI erkennt Startnummern, ordnet Fahrer zu, schreibt Metadaten – direkt im Browser, ohne Installation.
     </p>
     <div class="hero-actions">
-      <a href="https://app.skipi.cloud" class="btn-primary">🚀 Jetzt kostenlos testen</a>
-      <a href="#features" class="btn-secondary">Features entdecken →</a>
+      <a href="https://app.skipi.cloud" class="btn-primary"><span data-i18n="hero.cta_try">🚀 Jetzt kostenlos testen</span></a>
+      <a href="#features" class="btn-secondary"><span data-i18n="hero.cta_features">Features entdecken →</span></a>
     </div>
     <div class="hero-stats">
       <div class="stat">
@@ -1023,7 +1040,11 @@
         {"@type":"Question","name":"Wie funktioniert die automatische Startnummern-Erkennung?","acceptedAnswer":{"@type":"Answer","text":"Skipi nutzt KI-gestützte Bilderkennung (OptiMatch AI) um Startnummern auf Fahrzeugen zu erkennen und mit importierten Starterlisten abzugleichen. Genauigkeit über 95% bei klar lesbaren Nummern."}},
         {"@type":"Question","name":"Welche Rennserien werden unterstützt?","acceptedAnswer":{"@type":"Answer","text":"WEC, NLS, GT World Challenge Europe (GTWC), 24h Nürburgring sowie generische PDF- und CSV-Starterlisten."}},
         {"@type":"Question","name":"Was ist ein Token?","acceptedAnswer":{"@type":"Answer","text":"1 Token = 1 vollständig analysiertes Foto. Pro Event werden je nach Größe 200–8.000 Token benötigt."}},
-        {"@type":"Question","name":"Muss ich eine Software installieren?","acceptedAnswer":{"@type":"Answer","text":"Nein. Skipi läuft vollständig im Browser, kein Download oder Installation nötig. Chrome empfohlen."}}
+        {"@type":"Question","name":"Muss ich eine Software installieren?","acceptedAnswer":{"@type":"Answer","text":"Nein. Skipi läuft vollständig im Browser, kein Download oder Installation nötig. Chrome empfohlen."}},
+        {"@type":"Question","name":"Welche Pläne gibt es und was kosten sie?","acceptedAnswer":{"@type":"Answer","text":"Tryout kostenlos (100 Token), Essentials 9€/Monat (500 Token), Advanced 19€/Monat (2.000 Token), Premier 39€/Monat (6.000 Token), Unlimited 89€/Monat (15.000 Token), Agency 199€/Monat (50.000 Token, bis 20 Nutzer)."}},
+        {"@type":"Question","name":"Wie werden meine Fotos gespeichert?","acceptedAnswer":{"@type":"Answer","text":"Skipi lädt keine Originalfotos hoch. Für die KI-Analyse werden nur komprimierte Thumbnails (max. 800px) übertragen. Originalbilder bleiben auf deinem Gerät. Starterlisten werden in einer nutzergetrennten Datenbank auf Cloudflare EU-Infrastruktur gespeichert."}},
+        {"@type":"Question","name":"Funktioniert Skipi auch für Bergrennen?","acceptedAnswer":{"@type":"Answer","text":"Ja. Skipi unterstützt die Deutsche Automobil-Bergmeisterschaft (DMSB) und liest offizielle Teilnehmerlisten automatisch aus PDF-Dateien aus."}},
+        {"@type":"Question","name":"Was passiert wenn meine Token aufgebraucht sind?","acceptedAnswer":{"@type":"Answer","text":"Du kannst jederzeit PowerUp-Pakete zukaufen (gültig 12 Monate) oder auf einen höheren Plan upgraden."}}
       ]
     }
     </script>
@@ -1120,6 +1141,107 @@
     localStorage.setItem('skipi-landing-theme', next);
     btn.textContent = next === 'dark' ? '☀️' : '🌙';
   });
+})();
+</script>
+<script>
+// ── Skipi i18n System ──────────────────────────────────────────────────────
+const LANGS = [
+  {code:'de', flag:'🇩🇪', label:'Deutsch'},
+  {code:'en', flag:'🇬🇧', label:'English'},
+  {code:'fr', flag:'🇫🇷', label:'Français'},
+  {code:'it', flag:'🇮🇹', label:'Italiano'},
+  {code:'es', flag:'🇪🇸', label:'Español'},
+  {code:'pt', flag:'🇵🇹', label:'Português'},
+];
+
+const T = {
+  de: {
+    'nav.features':'Features','nav.workflow':'Workflow','nav.series':'Serien','nav.pricing':'Preise','nav.cta':'App öffnen →',
+    'hero.badge':'Neu: SuperMatch AI Bilderkennung',
+    'hero.h1':'Weniger manuell taggen.<br><em>Mehr shooten.</em>',
+    'hero.cta_try':'🚀 Jetzt kostenlos testen','hero.cta_features':'Features entdecken →',
+  },
+  en: {
+    'nav.features':'Features','nav.workflow':'Workflow','nav.series':'Series','nav.pricing':'Pricing','nav.cta':'Open App →',
+    'hero.badge':'New: SuperMatch AI Image Recognition',
+    'hero.h1':'Less manual tagging.<br><em>More shooting.</em>',
+    'hero.cta_try':'🚀 Try for free','hero.cta_features':'Discover features →',
+  },
+  fr: {
+    'nav.features':'Fonctions','nav.workflow':'Workflow','nav.series':'Séries','nav.pricing':'Tarifs','nav.cta':'Ouvrir l'app →',
+    'hero.badge':'Nouveau: SuperMatch AI Reconnaissance d'image',
+    'hero.h1':'Moins de tags manuels.<br><em>Plus de photos.</em>',
+    'hero.cta_try':'🚀 Essayer gratuitement','hero.cta_features':'Découvrir les fonctions →',
+  },
+  it: {
+    'nav.features':'Funzioni','nav.workflow':'Workflow','nav.series':'Serie','nav.pricing':'Prezzi','nav.cta':'Apri l'app →',
+    'hero.badge':'Nuovo: SuperMatch AI Riconoscimento immagini',
+    'hero.h1':'Meno tagging manuale.<br><em>Più scatti.</em>',
+    'hero.cta_try':'🚀 Prova gratis','hero.cta_features':'Scopri le funzioni →',
+  },
+  es: {
+    'nav.features':'Funciones','nav.workflow':'Flujo de trabajo','nav.series':'Series','nav.pricing':'Precios','nav.cta':'Abrir app →',
+    'hero.badge':'Nuevo: SuperMatch AI Reconocimiento de imágenes',
+    'hero.h1':'Menos etiquetado manual.<br><em>Más fotos.</em>',
+    'hero.cta_try':'🚀 Probar gratis','hero.cta_features':'Descubrir funciones →',
+  },
+  pt: {
+    'nav.features':'Funções','nav.workflow':'Fluxo de trabalho','nav.series':'Séries','nav.pricing':'Preços','nav.cta':'Abrir app →',
+    'hero.badge':'Novo: SuperMatch AI Reconhecimento de imagens',
+    'hero.h1':'Menos tags manuais.<br><em>Mais fotos.</em>',
+    'hero.cta_try':'🚀 Experimentar grátis','hero.cta_features':'Descobrir funções →',
+  },
+};
+
+function applyLang(lang) {
+  const t = T[lang] || T['de'];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key]) el.textContent = t[key];
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.getAttribute('data-i18n-html');
+    if (t[key]) el.innerHTML = t[key];
+  });
+  // Update html lang attribute
+  document.documentElement.lang = lang;
+  // Update flag/code in button
+  const lObj = LANGS.find(l=>l.code===lang) || LANGS[0];
+  document.getElementById('langFlag').textContent = lObj.flag;
+  document.getElementById('langCode').textContent = lObj.code.toUpperCase();
+  // Mark active in dropdown
+  document.querySelectorAll('.lang-item').forEach(el => {
+    el.classList.toggle('active', el.dataset.lang === lang);
+  });
+  localStorage.setItem('skipi-lang', lang);
+}
+
+(function() {
+  // Build dropdown
+  const dropdown = document.getElementById('langDropdown');
+  LANGS.forEach(l => {
+    const btn = document.createElement('button');
+    btn.className = 'lang-item';
+    btn.dataset.lang = l.code;
+    btn.innerHTML = `<span style="font-size:16px">${l.flag}</span><span>${l.label}</span>`;
+    btn.addEventListener('click', () => { applyLang(l.code); dropdown.style.display='none'; });
+    dropdown.appendChild(btn);
+  });
+
+  // Toggle dropdown
+  const toggleBtn = document.getElementById('langToggleBtn');
+  toggleBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+  });
+  document.addEventListener('click', () => { dropdown.style.display = 'none'; });
+
+  // Apply stored or browser language
+  const stored = localStorage.getItem('skipi-lang');
+  const browserLang = (navigator.language || 'de').slice(0,2).toLowerCase();
+  const supported = LANGS.map(l=>l.code);
+  const lang = stored || (supported.includes(browserLang) ? browserLang : 'de');
+  applyLang(lang);
 })();
 </script>
 </body>
