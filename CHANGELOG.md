@@ -1,5 +1,8 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.8] – 2026-04-17
+- Pricing: Agency als Enterprise-Banner unter den 4 Standard-Karten
+
 ## [1.3.7] – 2026-04-17
 - Pricing: Agency-Plan (199€, 50.000 Token, 20 Seats) ergänzt
 
