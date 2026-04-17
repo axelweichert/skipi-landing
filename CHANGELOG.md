@@ -1,5 +1,9 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.20] – 2026-04-17
+- GEO: llms.txt angelegt (ChatGPT, Claude, Perplexity)
+- robots.txt: AI-Crawler explizit erlaubt + llms.txt Referenz
+
 ## [1.3.19] – 2026-04-17
 - EU-Infrastruktur → Cloudflare EU-Infrastruktur
 

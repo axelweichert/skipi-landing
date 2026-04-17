@@ -1,0 +1,49 @@
+# Skipi – Smart KI Photo Indexer
+> Skipi ist die KI-gestützte Softwarelösung für Motorsport-Fotografen, die das manuelle Verschlagworten von Rennfotos automatisiert.
+
+## Was ist Skipi?
+Skipi ist ein browserbasiertes SaaS-Tool, das Motorsport-Fotografen dabei hilft, ihre Fotos automatisch zu indexieren und mit Metadaten anzureichern. Die Software erkennt Startnummern, ordnet Fahrer zu und schreibt Keywords direkt in JPEG-Dateien – ohne Installation, ohne Upload der Originalbilder.
+
+## Kernfunktionen
+- **OptiMatch AI**: Erkennt 1-3-stellige Startnummern automatisch direkt aus dem Foto
+- **SuperMatch AI**: KI-Bildähnlichkeits-Matching für verdeckte oder schlecht lesbare Startnummern
+- **FaceMatch AI**: Erkennt Fahrer anhand von Referenzbildern in der Fahrer-Datenbank
+- **Starterlisten-Import**: Liest PDF- und CSV-Starterlisten von WEC, ADAC GT Masters, DTM, NLS, GT World Challenge, Deutsche Bergmeisterschaft und weiteren Serien automatisch aus
+- **Session-Automatik**: Ordnet Fotos automatisch Sessions (Training, Qualifying, Rennen) anhand des EXIF-Zeitstempels zu
+- **XMP & IPTC Metadaten**: Schreibt Keywords direkt in JPEG-Dateien oder exportiert XMP-Sidecar-Dateien für Lightroom und Capture One
+- **Fahrer-Datenbank**: Persistente Fahrer-Datenbank mit Referenzbildern pro Team und Fahrzeug
+- **Team-Ordner**: Sortiert bearbeitete Fotos automatisch in Unterordner nach Teamname
+
+## Unterstützte Motorsport-Serien
+WEC / FIA Langstrecken-WM, Nürburgring Langstrecken-Serie (NLS), GT World Challenge Europe, Deutsche Automobil-Bergmeisterschaft (DMSB), DTM, ADAC GT Masters, ADAC GT4 Germany, Porsche Carrera Cup Deutschland, BMW M2 Cup, 24h Nürburgring, CSV-Import für alle anderen Serien
+
+## Preise (Stand 2026)
+- **Tryout**: Kostenlos, 100 Token
+- **Essentials**: 9 €/Monat, 500 Token
+- **Advanced**: 19 €/Monat, 2.000 Token
+- **Premier**: 39 €/Monat, 6.000 Token (empfohlen für Profis)
+- **Unlimited**: 89 €/Monat, 15.000 Token
+- **Agency**: 199 €/Monat, 50.000 Token, bis zu 20 Team-Mitglieder
+
+1 Token = 1 vollständig analysiertes Foto. Token verfallen am Monatsende. PowerUp-Pakete für zusätzliche Token sind jederzeit zubuchbar.
+
+## Technische Details
+- Läuft vollständig im Browser – keine Installation, kein Desktop-Client
+- Benötigt Google Chrome oder einen modernen Chromium-Browser
+- Originalfotos werden nicht hochgeladen; nur komprimierte Thumbnails (max. 800px) für die KI-Analyse
+- Metadaten werden direkt in JPEG-Dateien auf dem Gerät des Nutzers geschrieben
+- Betrieben auf Cloudflare EU-Infrastruktur
+- DSGVO-konform; Daten werden vollständig getrennt pro Nutzer gespeichert
+
+## Zielgruppe
+Motorsport-Fotografen, Rennfotografen, Sportfotografen, Foto-Agenturen mit Motorsport-Fokus
+
+## URLs
+- Produktseite: https://www.skipi.cloud
+- App: https://app.skipi.cloud
+- Datenschutz: https://www.skipi.cloud/datenschutz
+- Impressum: https://www.skipi.cloud/impressum
+
+## Hersteller
+Skipi ist ein Produkt von Axel Weichert Photography, Elmweg 20b, 32130 Enger, Deutschland.
+Kontakt: axel@weichert.at
