@@ -386,9 +386,11 @@
   .pricing-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(0,0,0,.3); }
   .pricing-card.selected { border-color: var(--orange); background: linear-gradient(135deg, rgba(232,93,4,.1) 0%, var(--dark2) 60%); transform: translateY(-4px); box-shadow: 0 0 0 2px rgba(232,93,4,.4); }
   .pricing-card.selected .btn-pricing.outline { background: var(--orange); color: #fff; border-color: var(--orange); }
+  @keyframes pulse-card { 0%,100%{box-shadow:0 0 0 0 rgba(232,93,4,0),0 0 20px rgba(232,93,4,.15)} 50%{box-shadow:0 0 0 6px rgba(232,93,4,.15),0 0 40px rgba(232,93,4,.3)} }
   .pricing-card.featured {
     border-color: var(--orange);
     background: linear-gradient(135deg, rgba(232,93,4,.08) 0%, var(--dark2) 60%);
+    animation: pulse-card 2.5s ease-in-out infinite;
   }
   @keyframes pulse-orange { 0%,100%{transform:translateX(-50%) scale(1);background:#e85d04} 50%{transform:translateX(-50%) scale(1.08);background:#ff7a1a} }
   .pricing-popular {

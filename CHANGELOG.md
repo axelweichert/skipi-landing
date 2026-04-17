@@ -1,5 +1,8 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.13] – 2026-04-17
+- UI: Premier-Karte pulsiert als ganzes Feld (orange Glow-Animation)
+
 ## [1.3.12] – 2026-04-17
 - BUGFIX: Empfohlen-Badge pulsiert jetzt sichtbar (scale+color statt box-shadow)
 
