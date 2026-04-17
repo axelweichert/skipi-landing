@@ -1,5 +1,8 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.17] – 2026-04-17
+- Light Mode Logo: zurück zu filter invert+hue-rotate
+
 ## [1.3.16] – 2026-04-17
 - BUGFIX: Light Mode Logo – dunkler Hintergrund statt blauer Filter (CI erhalten)
 
