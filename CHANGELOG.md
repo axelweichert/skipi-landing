@@ -1,5 +1,8 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.15] – 2026-04-17
+- Light Mode: skipi-Logo in schwarz dargestellt (CSS filter invert+hue-rotate)
+
 ## [1.3.14] – 2026-04-17
 - NEU: Dark/Light Mode Toggle in der Navigation
 
