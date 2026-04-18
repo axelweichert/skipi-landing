@@ -1,5 +1,8 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.37] – 2026-04-18
+- BUGFIX: Sprachschalter defekt – unescapter Apostroph in französischer Übersetzung (l'une) hat den gesamten i18n-Block zum Absturz gebracht
+
 ## [1.3.36] – 2026-04-18
 - PowerUp-Sektion: Titel „Mehr Token benötigt?" → „PowerUps gefällig?" (alle 6 Sprachen)
 - PowerUp-Sektion: Neues zweispaltiges Layout — Token-Pakete links, Backup Add-on rechts
