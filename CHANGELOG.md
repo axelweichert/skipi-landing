@@ -1,5 +1,10 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.38] – 2026-04-18
+- BUGFIX: Pricing-Sektion war nur auf Deutsch – data-i18n-Attribute fehlten komplett bei Advanced, Premier, Unlimited Feature-Listen und gesamtem Agency-Banner
+- i18n: Agency-Banner vollständig übersetzt (Tagline, 6 Features, CTA) in DE/EN/FR/IT/ES/PT
+- i18n: Neue Keys agency.tagline, agency.f1–f3, agency.f5–f6, agency.cta in allen 6 Sprachen
+
 ## [1.3.37] – 2026-04-18
 - BUGFIX: Sprachschalter defekt – unescapter Apostroph in französischer Übersetzung (l'une) hat den gesamten i18n-Block zum Absturz gebracht
 
