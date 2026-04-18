@@ -199,6 +199,7 @@
   .nav-links { display: flex; align-items: center; gap: 32px; }
   .nav-links a { color: var(--text2); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
   .nav-links a:hover { color: #fff; }
+  .nav-actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
   .nav-cta {
     background: var(--orange); color: #fff;
     padding: 8px 20px; border-radius: 4px;
@@ -491,6 +492,7 @@
   @media (max-width: 900px) {
     nav { padding: 0 24px; }
     .nav-links { display: none; }
+    .nav-actions { gap: 8px; }
     .hero { padding: 100px 24px 60px; }
     .hero-visual { display: none; }
     h1 { font-size: 48px; }
@@ -500,10 +502,12 @@
     .workflow-compare { grid-template-columns: 1fr; }
     .pricing-grid { grid-template-columns: 1fr 1fr !important; }
     .diff-grid { grid-template-columns: 1fr 1fr; }
-    footer { flex-direction: column; gap: 16px; text-align: center; padding: 40px 24px; }
+    footer { padding: 40px 24px; }
+    .footer-inner { flex-direction: column; align-items: center; text-align: center; gap: 20px; }
+    .footer-logo { align-items: center; }
     .footer-links { justify-content: center; flex-wrap: wrap; }
-    /* About – Tablet: Foto kleiner, Text bleibt */
-    #about .about-inner { gap: 36px; }
+    /* About – Tablet */
+    #about .about-inner { gap: 36px; justify-content: center; }
     #about .about-photo { width: 200px !important; }
     #about .about-photo img { width: 200px !important; height: 250px !important; }
   }
@@ -511,7 +515,7 @@
   /* ── Mobile ── */
   @media (max-width: 600px) {
     nav { padding: 0 16px; height: 56px; }
-    .nav-cta { padding: 8px 14px; font-size: 13px; }
+    .nav-cta { padding: 6px 12px; font-size: 12px; }
     h1 { font-size: 34px; line-height: 1.2; }
     h2 { font-size: 28px; }
     .hero { padding: 80px 16px 48px; }
@@ -527,15 +531,17 @@
     .series-grid { gap: 8px; }
     .cta-section { padding: 48px 16px; }
     .cta-section h2 { font-size: 28px; }
-    footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 16px; }
-    .footer-links { justify-content: center; flex-wrap: wrap; gap: 16px; }
+    footer { padding: 32px 16px; }
+    .footer-inner { flex-direction: column; align-items: center; text-align: center; gap: 20px; }
+    .footer-logo { align-items: center; }
+    .footer-links { justify-content: center; flex-wrap: wrap; gap: 12px; }
     details { padding: 16px; }
     details summary { font-size: 14px; }
     /* About – Mobile: gestapelt, Foto zentriert */
-    #about .about-inner { flex-direction: column; align-items: center; gap: 28px; }
-    #about .about-photo { width: 100% !important; max-width: 280px; }
+    #about .about-inner { flex-direction: column; align-items: center; gap: 28px; justify-content: center; }
+    #about .about-photo { width: 100% !important; max-width: 280px; display: flex; flex-direction: column; align-items: center; }
     #about .about-photo img { width: 100% !important; height: 260px !important; }
-    /* Kontakt-Modal – Mobile: kleineres Padding */
+    /* Kontakt-Modal – Mobile */
     #contact-modal > div:last-child { padding: 24px 20px; border-radius: 12px; }
   }
   .lang-item { display:flex; align-items:center; gap:8px; padding:7px 12px; border-radius:6px; cursor:pointer; font-size:13px; color:var(--text); white-space:nowrap; transition:background .15s; background:none; border:none; width:100%; text-align:left; font-family:inherit; }
@@ -555,6 +561,8 @@
     <a href="#pricing" data-i18n="nav.pricing">Preise</a>
     <a href="#security" data-i18n="nav.security">Infrastruktur</a>
     <a href="#about" data-i18n="nav.about">Über uns</a>
+  </div>
+  <div class="nav-actions">
     <div class="lang-switcher" id="langSwitcher" style="position:relative;display:inline-flex;align-items:center">
       <button class="theme-toggle-btn" id="langToggleBtn" style="gap:4px" title="Sprache wählen / Select language">
         <span id="langFlag">🇩🇪</span><span id="langCode" style="font-size:11px;font-weight:700">DE</span>
@@ -1200,9 +1208,9 @@
 </section>
 
 <!-- FOOTER -->
-<footer style="flex-direction:column;gap:0">
-  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;width:100%">
-    <div class="footer-logo">
+<footer>
+  <div class="footer-inner" style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:20px;width:100%">
+    <div class="footer-logo" style="display:flex;flex-direction:column">
       <img src="/skipi-logo-dark.svg" alt="Skipi" style="height:36px;width:auto;margin-bottom:6px">
       <div class="footer-copy" style="margin-top:4px"><span data-i18n="footer.tagline">skipi – Smart KI Picture Indexer</span></div>
       <div class="footer-copy" style="margin-top:2px;opacity:.6">eine Marke von <a href="https://weichert.at" style="color:inherit">weichert.at</a> · © 2026 Axel Weichert</div>
