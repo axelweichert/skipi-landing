@@ -938,24 +938,55 @@
     </div>
 
     <!-- PowerUp -->
-    <div style="margin-top:32px;text-align:center;padding:24px;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px">
-      <div style="font-size:14px;font-weight:700;margin-bottom:8px" data-i18n="pu.title">Mehr Token benötigt?</div>
-      <div style="font-size:13px;color:var(--text2);margin-bottom:16px" data-i18n="pu.desc">Token-Pakete können jederzeit dazu gebucht werden und verfallen nach 12 Monaten.</div>
-      <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;padding:0 8px">
-        <div style="padding:12px 20px;background:var(--dark1);border:1px solid var(--border);border-radius:8px;font-size:12px">
-          <div style="font-weight:800;font-size:15px;color:var(--orange)">5 €</div>
-          <div style="color:var(--text2)">500 Token</div>
+    <div style="margin-top:32px;padding:28px;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px">
+
+      <!-- Title -->
+      <div style="text-align:center;font-size:14px;font-weight:700;margin-bottom:4px" data-i18n="pu.title">PowerUps gefällig?</div>
+      <div style="text-align:center;font-size:12px;color:var(--text3);margin-bottom:24px" data-i18n="pu.note">PowerUps sind nach dem Login im Account-Bereich verfügbar.</div>
+
+      <!-- Two-column layout -->
+      <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:stretch">
+
+        <!-- Token Packages -->
+        <div style="flex:1;min-width:240px;background:var(--dark1);border:1px solid var(--border);border-radius:10px;padding:18px">
+          <div style="font-size:12px;font-weight:700;color:var(--text1);margin-bottom:4px;display:flex;align-items:center;gap:6px">🏷 <span data-i18n="pu.token_title">Token-Pakete</span></div>
+          <div style="font-size:11px;color:var(--text3);margin-bottom:14px" data-i18n="pu.desc">Jederzeit zubuchbar, 12 Monate gültig.</div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-start">
+            <div style="padding:10px 16px;background:var(--dark2);border:1px solid var(--border);border-radius:7px;font-size:12px;text-align:center">
+              <div style="font-weight:800;font-size:14px;color:var(--orange)">5 €</div>
+              <div style="color:var(--text2);margin-top:2px">500 Token</div>
+            </div>
+            <div style="padding:10px 16px;background:var(--dark2);border:1px solid var(--border);border-radius:7px;font-size:12px;text-align:center">
+              <div style="font-weight:800;font-size:14px;color:var(--orange)">12 €</div>
+              <div style="color:var(--text2);margin-top:2px">1.500 Token</div>
+            </div>
+            <div style="padding:10px 16px;background:var(--dark2);border:1px solid var(--border);border-radius:7px;font-size:12px;text-align:center">
+              <div style="font-weight:800;font-size:14px;color:var(--orange)">35 €</div>
+              <div style="color:var(--text2);margin-top:2px">5.000 Token</div>
+            </div>
+          </div>
         </div>
-        <div style="padding:12px 20px;background:var(--dark1);border:1px solid var(--border);border-radius:8px;font-size:12px">
-          <div style="font-weight:800;font-size:15px;color:var(--orange)">12 €</div>
-          <div style="color:var(--text2)">1.500 Token</div>
+
+        <!-- Backup Add-on -->
+        <div id="backup-addon-card" style="flex:1;min-width:240px;background:var(--dark1);border:1px solid rgba(232,93,4,.25);border-radius:10px;padding:18px;position:relative;transition:border-color .2s">
+          <div style="font-size:12px;font-weight:700;color:var(--text1);margin-bottom:4px;display:flex;align-items:center;gap:6px">🗄 <span data-i18n="pu.backup_title">Datenbank-Backup</span></div>
+          <div style="font-size:11px;color:var(--text3);margin-bottom:14px" data-i18n="pu.backup_desc">Verschlüsselt gespeichert in der EU. Jederzeit wiederherstellbar.</div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+            <div>
+              <div style="font-weight:800;font-size:18px;color:var(--orange);line-height:1">5 € <span style="font-size:11px;font-weight:400;color:var(--text3)">/&nbsp;Monat</span></div>
+              <div style="font-size:10px;color:var(--text3);margin-top:3px" data-i18n="pu.backup_hint">Monatlich kündbar · nur im bezahlten Plan</div>
+            </div>
+            <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--text2);white-space:nowrap">
+              <input type="checkbox" id="backup-addon-check" style="accent-color:var(--orange);width:16px;height:16px;cursor:pointer" onchange="toggleBackupAddon(this.checked)">
+              <span data-i18n="pu.backup_add">Zum Plan hinzufügen</span>
+            </label>
+          </div>
+          <div id="backup-addon-active" style="display:none;margin-top:12px;padding:7px 10px;background:rgba(232,93,4,.12);border-radius:6px;font-size:11px;color:var(--orange);font-weight:600">
+            ✓ <span data-i18n="pu.backup_selected">Backup Add-on ausgewählt — klicke „Starten" bei deinem Wunschplan</span>
+          </div>
         </div>
-        <div style="padding:12px 20px;background:var(--dark1);border:1px solid var(--border);border-radius:8px;font-size:12px">
-          <div style="font-weight:800;font-size:15px;color:var(--orange)">35 €</div>
-          <div style="color:var(--text2)">5.000 Token</div>
-        </div>
+
       </div>
-      <div style="margin-top:12px;font-size:11px;color:var(--text3)" data-i18n="pu.note">PowerUps sind nach dem Login im Account-Bereich verfügbar.</div>
     </div>
 
   </div>
@@ -1213,6 +1244,25 @@
 })();
 </script>
 <script>
+// ── Backup Add-on toggle ──────────────────────────────────────────────────
+function toggleBackupAddon(checked) {
+  var hint = document.getElementById('backup-addon-active');
+  var card = document.getElementById('backup-addon-card');
+  if (hint) hint.style.display = checked ? 'block' : 'none';
+  if (card) card.style.borderColor = checked ? 'var(--orange)' : 'rgba(232,93,4,.25)';
+  // Add/remove &addon=backup from all plan buttons
+  document.querySelectorAll('.btn-pricing').forEach(function(btn){
+    var href = btn.getAttribute('href');
+    if (!href) return;
+    if (checked) {
+      if (href.indexOf('addon=backup') === -1) btn.setAttribute('href', href + '&addon=backup');
+    } else {
+      btn.setAttribute('href', href.replace('&addon=backup',''));
+    }
+  });
+}
+</script>
+<script>
 // ── Skipi i18n – Complete Translation System ──────────────────────────────
 const LANGS=[
   {code:'de',flag:'🇩🇪',label:'Deutsch'},
@@ -1253,7 +1303,7 @@ de:{
   'plan.ess.desc':'Für Hobby-Fotografen und gelegentliche Events.','plan.adv.desc':'Für aktive Fotografen mit 3–5 Events pro Monat.','plan.pre.desc':'Für Profis und mehrere Rennserien gleichzeitig.','plan.unl.desc':'Für Agenturen und Vollzeit-Motorsportfotografen.',
   'feat.ai':'KI Startnummern-Erkennung','feat.pdf':'PDF & CSV Starterlisten-Import','feat.xmp':'XMP & JPEG Metadaten schreiben','feat.session':'Session-Automatik','feat.flags':'Farbmarkierungen & Flags','feat.db':'Fahrer-Datenbank','feat.match':'KI Bildähnlichkeits-Matching','feat.parser':'Erweiterte Starterlisten-Parser (GT & Langstrecke)','feat.support':'Premium Support (48h Antwortzeit)',
   'btn.start':'Starten',
-  'pu.title':'Mehr Token benötigt?','pu.desc':'Token-Pakete können jederzeit dazu gebucht werden und verfallen nach 12 Monaten.','pu.note':'PowerUps sind nach dem Login im Account-Bereich verfügbar.',
+  'pu.title':'PowerUps gefällig?','pu.token_title':'Token-Pakete','pu.desc':'Jederzeit zubuchbar, 12 Monate gültig.','pu.note':'PowerUps sind nach dem Login im Account-Bereich verfügbar.','pu.backup_title':'Datenbank-Backup','pu.backup_desc':'Verschlüsselt gespeichert in der EU. Jederzeit wiederherstellbar.','pu.backup_hint':'Monatlich kündbar · nur im bezahlten Plan','pu.backup_add':'Zum Plan hinzufügen','pu.backup_selected':'Backup Add-on ausgewählt — klicke „Starten" bei deinem Wunschplan',
   'faq.heading':'Häufige Fragen',
   'cta.h2':'Bereit für deinen<br><em>ersten Event mit Skipi?</em>','cta.sub':'Starte jetzt kostenlos. Keine Kreditkarte, keine Installation. Einfach Browser öffnen und loslegen.','cta.btn':'🚀 Skipi kostenlos testen',
   'footer.tagline':'skipi – Smart KI Picture Indexer','footer.contact':'Kontakt','footer.imprint':'Impressum','footer.privacy':'Datenschutz',
@@ -1287,7 +1337,7 @@ en:{
   'plan.ess.desc':'For hobby photographers and occasional events.','plan.adv.desc':'For active photographers with 3–5 events per month.','plan.pre.desc':'For professionals and multiple racing series simultaneously.','plan.unl.desc':'For agencies and full-time motorsport photographers.',
   'feat.ai':'AI Race Number Recognition','feat.pdf':'PDF & CSV Entry List Import','feat.xmp':'XMP & JPEG Metadata Writing','feat.session':'Session Automation','feat.flags':'Color Labels & Flags','feat.db':'Driver Database','feat.match':'AI Image Similarity Matching','feat.parser':'Extended Entry List Parser (GT & Endurance)','feat.support':'Premium Support (48h response)',
   'btn.start':'Get started',
-  'pu.title':'Need more tokens?','pu.desc':'Token packages can be added at any time and expire after 12 months.','pu.note':'PowerUps are available in the account section after login.',
+  'pu.title':'PowerUps?','pu.token_title':'Token Packages','pu.desc':'Add anytime, valid for 12 months.','pu.note':'PowerUps are available in the account section after login.','pu.backup_title':'Database Backup','pu.backup_desc':'Encrypted storage in the EU. Restore at any time.','pu.backup_hint':'Cancel anytime · paid plans only','pu.backup_add':'Add to plan','pu.backup_selected':'Backup Add-on selected — click "Start" on your chosen plan',
   'faq.heading':'Frequently Asked Questions',
   'cta.h2':'Ready for your<br><em>first event with Skipi?</em>','cta.sub':'Start free now. No credit card, no installation. Just open your browser and go.','cta.btn':'🚀 Try Skipi for free',
   'footer.tagline':'skipi – Smart KI Picture Indexer','footer.contact':'Contact','footer.imprint':'Legal Notice','footer.privacy':'Privacy Policy',
@@ -1321,7 +1371,7 @@ fr:{
   'plan.ess.desc':'Pour les photographes amateurs et les événements occasionnels.','plan.adv.desc':'Pour les photographes actifs avec 3–5 événements par mois.','plan.pre.desc':'Pour les professionnels et plusieurs séries simultanément.','plan.unl.desc':'Pour les agences et les photographes de motorsport à plein temps.',
   'feat.ai':'Reconnaissance IA des numéros','feat.pdf':'Import PDF & CSV listes de départ','feat.xmp':'Écriture métadonnées XMP & JPEG','feat.session':'Automatisation sessions','feat.flags':'Marquages couleur & Drapeaux','feat.db':'Base de données pilotes','feat.match':'Correspondance IA par similarité','feat.parser':'Parseur étendu (GT & Endurance)','feat.support':'Support Premium (réponse 48h)',
   'btn.start':'Commencer',
-  'pu.title':'Besoin de plus de tokens ?','pu.desc':'Les paquets de tokens peuvent être ajoutés à tout moment et expirent après 12 mois.','pu.note':'Les PowerUps sont disponibles dans la section compte après connexion.',
+  'pu.title':'Des PowerUps ?','pu.token_title':'Packs de tokens','pu.desc':'Ajoutables à tout moment, valables 12 mois.','pu.note':'Les PowerUps sont disponibles dans la section compte après connexion.','pu.backup_title':'Sauvegarde BDD','pu.backup_desc':'Stockage chiffré en UE. Restauration à tout moment.','pu.backup_hint':'Résiliable mensuellement · plans payants uniquement','pu.backup_add':'Ajouter au plan','pu.backup_selected':'Backup sélectionné — cliquez sur « Démarrer » pour votre plan',
   'faq.heading':'Questions fréquentes',
   'cta.h2':'Prêt pour votre<br><em>premier événement avec Skipi ?</em>','cta.sub':'Commencez gratuitement maintenant. Pas de carte bancaire, pas d\'installation. Ouvrez simplement votre navigateur.','cta.btn':'🚀 Essayer Skipi gratuitement',
   'footer.tagline':'skipi – Smart KI Picture Indexer','footer.contact':'Contact','footer.imprint':'Mentions légales','footer.privacy':'Confidentialité',
@@ -1355,7 +1405,7 @@ it:{
   'plan.ess.desc':'Per fotografi amatoriali ed eventi occasionali.','plan.adv.desc':'Per fotografi attivi con 3–5 eventi al mese.','plan.pre.desc':'Per professionisti e più serie simultane.','plan.unl.desc':'Per agenzie e fotografi di motorsport a tempo pieno.',
   'feat.ai':'Riconoscimento IA numeri','feat.pdf':'Import PDF & CSV liste iscritti','feat.xmp':'Scrittura metadati XMP & JPEG','feat.session':'Automazione sessioni','feat.flags':'Etichette colore & Flag','feat.db':'Database piloti','feat.match':'Corrispondenza IA per somiglianza','feat.parser':'Parser esteso (GT & Endurance)','feat.support':'Supporto Premium (risposta 48h)',
   'btn.start':'Inizia',
-  'pu.title':'Hai bisogno di più token?','pu.desc':'I pacchetti token possono essere aggiunti in qualsiasi momento e scadono dopo 12 mesi.','pu.note':'I PowerUp sono disponibili nella sezione account dopo il login.',
+  'pu.title':'PowerUp in offerta?','pu.token_title':'Pacchetti token','pu.desc':'Acquistabili in qualsiasi momento, validi 12 mesi.','pu.note':'I PowerUp sono disponibili nella sezione account dopo il login.','pu.backup_title':'Backup Database','pu.backup_desc':'Archiviazione crittografata in UE. Ripristino in qualsiasi momento.','pu.backup_hint':'Annullabile mensilmente · solo piani a pagamento','pu.backup_add':'Aggiungi al piano','pu.backup_selected':'Backup selezionato — clicca su "Inizia" per il tuo piano',
   'faq.heading':'Domande frequenti',
   'cta.h2':'Pronto per il tuo<br><em>primo evento con Skipi?</em>','cta.sub':'Inizia gratis ora. Nessuna carta di credito, nessuna installazione. Apri semplicemente il browser.','cta.btn':'🚀 Prova Skipi gratis',
   'footer.tagline':'skipi – Smart KI Picture Indexer','footer.contact':'Contatto','footer.imprint':'Note legali','footer.privacy':'Privacy',
@@ -1389,7 +1439,7 @@ es:{
   'plan.ess.desc':'Para fotógrafos aficionados y eventos ocasionales.','plan.adv.desc':'Para fotógrafos activos con 3–5 eventos al mes.','plan.pre.desc':'Para profesionales y múltiples series simultáneas.','plan.unl.desc':'Para agencias y fotógrafos de motorsport a tiempo completo.',
   'feat.ai':'Reconocimiento IA de números','feat.pdf':'Importación PDF & CSV listas de salida','feat.xmp':'Escritura metadatos XMP & JPEG','feat.session':'Automatización de sesiones','feat.flags':'Etiquetas de color & Banderas','feat.db':'Base de datos de pilotos','feat.match':'Coincidencia IA por similitud','feat.parser':'Parser extendido (GT & Resistencia)','feat.support':'Soporte Premium (respuesta 48h)',
   'btn.start':'Empezar',
-  'pu.title':'¿Necesitas más tokens?','pu.desc':'Los paquetes de tokens se pueden añadir en cualquier momento y caducan después de 12 meses.','pu.note':'Los PowerUps están disponibles en la sección de cuenta después del inicio de sesión.',
+  'pu.title':'¿PowerUps?','pu.token_title':'Paquetes de tokens','pu.desc':'Añadibles en cualquier momento, válidos 12 meses.','pu.note':'Los PowerUps están disponibles en la sección de cuenta después del inicio de sesión.','pu.backup_title':'Copia de seguridad','pu.backup_desc':'Almacenamiento cifrado en la UE. Restauración en cualquier momento.','pu.backup_hint':'Cancelable mensualmente · solo planes de pago','pu.backup_add':'Añadir al plan','pu.backup_selected':'Backup seleccionado — haz clic en «Empezar» en tu plan deseado',
   'faq.heading':'Preguntas frecuentes',
   'cta.h2':'¿Listo para tu<br><em>primer evento con Skipi?</em>','cta.sub':'Empieza gratis ahora. Sin tarjeta de crédito, sin instalación. Solo abre el navegador.','cta.btn':'🚀 Probar Skipi gratis',
   'footer.tagline':'skipi – Smart KI Picture Indexer','footer.contact':'Contacto','footer.imprint':'Aviso legal','footer.privacy':'Privacidad',
@@ -1423,7 +1473,7 @@ pt:{
   'plan.ess.desc':'Para fotógrafos amadores e eventos ocasionais.','plan.adv.desc':'Para fotógrafos ativos com 3–5 eventos por mês.','plan.pre.desc':'Para profissionais e múltiplas séries simultâneas.','plan.unl.desc':'Para agências e fotógrafos de motorsport a tempo inteiro.',
   'feat.ai':'Reconhecimento IA de números','feat.pdf':'Importação PDF & CSV listas de partida','feat.xmp':'Escrita metadados XMP & JPEG','feat.session':'Automação de sessões','feat.flags':'Etiquetas de cor & Bandeiras','feat.db':'Base de dados de pilotos','feat.match':'Correspondência IA por similaridade','feat.parser':'Parser alargado (GT & Resistência)','feat.support':'Suporte Premium (resposta 48h)',
   'btn.start':'Começar',
-  'pu.title':'Precisa de mais tokens?','pu.desc':'Os pacotes de tokens podem ser adicionados a qualquer momento e expiram após 12 meses.','pu.note':'Os PowerUps estão disponíveis na secção de conta após o login.',
+  'pu.title':'PowerUps disponíveis?','pu.token_title':'Pacotes de tokens','pu.desc':'Adicionáveis a qualquer momento, válidos 12 meses.','pu.note':'Os PowerUps estão disponíveis na secção de conta após o login.','pu.backup_title':'Backup de Base de Dados','pu.backup_desc':'Armazenamento cifrado na UE. Restauração a qualquer momento.','pu.backup_hint':'Cancelável mensalmente · apenas planos pagos','pu.backup_add':'Adicionar ao plano','pu.backup_selected':'Backup selecionado — clique em «Iniciar» no plano desejado',
   'faq.heading':'Perguntas frequentes',
   'cta.h2':'Pronto para o seu<br><em>primeiro evento com Skipi?</em>','cta.sub':'Comece grátis agora. Sem cartão de crédito, sem instalação. Basta abrir o navegador.','cta.btn':'🚀 Experimentar Skipi grátis',
   'footer.tagline':'skipi – Smart KI Picture Indexer','footer.contact':'Contacto','footer.imprint':'Aviso legal','footer.privacy':'Privacidade',

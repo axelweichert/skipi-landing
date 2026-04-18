@@ -1,5 +1,12 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.36] – 2026-04-18
+- PowerUp-Sektion: Titel „Mehr Token benötigt?" → „PowerUps gefällig?" (alle 6 Sprachen)
+- PowerUp-Sektion: Neues zweispaltiges Layout — Token-Pakete links, Backup Add-on rechts
+- Backup Add-on: 5 €/Monat, Checkbox „Zum Plan hinzufügen", orangefarbener Rahmen bei Aktivierung
+- Backup Add-on: Bei Aktivierung erhalten alle Plan-Buttons automatisch &addon=backup in der URL
+- i18n: Neue Keys pu.token_title, pu.backup_title, pu.backup_desc, pu.backup_hint, pu.backup_add, pu.backup_selected in allen 6 Sprachen
+
 ## [1.3.24] – 2026-04-18
 - FIX: Security-Sektion: Orange statt Blau als Akzentfarbe, nur 2 Stat-Karten (400+ TBps + &lt;2ms Latenz), 330+ und 13.000+ entfernt
 
