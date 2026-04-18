@@ -1,5 +1,10 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.39] – 2026-04-18
+- NEU: Über-uns-Sektion mit Foto von Axel Weichert, vollständiger Biografie und Links zu weichert.at + 100octane.de
+- Nav: „Über uns" Link in alle 6 Sprachen ergänzt
+- i18n: about.* Keys (label, h2, p1–p4, footer, location) in DE/EN/FR/IT/ES/PT
+
 ## [1.3.38] – 2026-04-18
 - BUGFIX: Pricing-Sektion war nur auf Deutsch – data-i18n-Attribute fehlten komplett bei Advanced, Premier, Unlimited Feature-Listen und gesamtem Agency-Banner
 - i18n: Agency-Banner vollständig übersetzt (Tagline, 6 Features, CTA) in DE/EN/FR/IT/ES/PT
