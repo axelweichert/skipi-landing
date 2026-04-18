@@ -157,6 +157,7 @@
   [data-theme="light"] nav { background: rgba(245,245,245,.92); border-color: rgba(0,0,0,.08); }
   [data-theme="light"] .nav-links a { color: var(--text2); }
   [data-theme="light"] .nav-links a:hover { color: #111; }
+  [data-theme="light"] .nav-cta { color: #fff !important; }
   [data-theme="light"] .hero-section { background: #f5f5f5; }
   [data-theme="light"] .hero-section::before { background-image: linear-gradient(rgba(0,0,0,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,.06) 1px, transparent 1px); }
   [data-theme="light"] img[src*="skipi-logo"] { filter: invert(1) hue-rotate(180deg); }
@@ -552,6 +553,7 @@
     <a href="#workflow" data-i18n="nav.workflow">Workflow</a>
     <a href="#serien" data-i18n="nav.series">Serien</a>
     <a href="#pricing" data-i18n="nav.pricing">Preise</a>
+    <a href="#security" data-i18n="nav.security">Infrastruktur</a>
     <a href="#about" data-i18n="nav.about">Über uns</a>
     <div class="lang-switcher" id="langSwitcher" style="position:relative;display:inline-flex;align-items:center">
       <button class="theme-toggle-btn" id="langToggleBtn" style="gap:4px" title="Sprache wählen / Select language">
@@ -1323,7 +1325,7 @@ const LANGS=[
 
 const T={
 de:{
-  'nav.features':'Features','nav.workflow':'Workflow','nav.series':'Serien','nav.pricing':'Preise','nav.about':'Über uns','nav.cta':'App öffnen →',
+  'nav.features':'Features','nav.workflow':'Workflow','nav.series':'Serien','nav.pricing':'Preise','nav.security':'Infrastruktur','nav.about':'Über uns','nav.cta':'App öffnen →',
   'hero.badge':'Neu: SuperMatch AI Bilderkennung',
   'hero.h1':'Weniger manuell taggen.<br><em>Mehr shooten.</em>',
   'hero.sub':'Skipi ist der <strong>intelligente Foto-Assistent für Motorsport-Fotografen</strong>. KI erkennt Startnummern, ordnet Fahrer zu, schreibt Metadaten – direkt im Browser, ohne Installation.',
@@ -1367,7 +1369,7 @@ de:{
   'about.footer':'Fotograf · Technik-Innovator · Gründer','about.location':'Enger, Deutschland',
 },
 en:{
-  'nav.features':'Features','nav.workflow':'Workflow','nav.series':'Series','nav.pricing':'Pricing','nav.about':'About','nav.cta':'Open App →',
+  'nav.features':'Features','nav.workflow':'Workflow','nav.series':'Series','nav.pricing':'Pricing','nav.security':'Infrastructure','nav.about':'About','nav.cta':'Open App →',
   'hero.badge':'New: SuperMatch AI Image Recognition',
   'hero.h1':'Less manual tagging.<br><em>More shooting.</em>',
   'hero.sub':'Skipi is the <strong>intelligent photo assistant for motorsport photographers</strong>. AI detects race numbers, assigns drivers, writes metadata – right in your browser, no installation.',
@@ -1411,7 +1413,7 @@ en:{
   'about.footer':'Photographer · Tech Innovator · Founder','about.location':'Enger, Germany',
 },
 fr:{
-  'nav.features':'Fonctions','nav.workflow':'Workflow','nav.series':'Séries','nav.pricing':'Tarifs','nav.about':'À propos','nav.cta':'Ouvrir l\'app →',
+  'nav.features':'Fonctions','nav.workflow':'Workflow','nav.series':'Séries','nav.pricing':'Tarifs','nav.security':'Infrastructure','nav.about':'À propos','nav.cta':'Ouvrir l\'app →',
   'hero.badge':'Nouveau : Reconnaissance d\'image SuperMatch AI',
   'hero.h1':'Moins de tags manuels.<br><em>Plus de photos.</em>',
   'hero.sub':'Skipi est l\'<strong>assistant photo intelligent pour les photographes de motorsport</strong>. L\'IA reconnaît les numéros de course, attribue les pilotes, écrit les métadonnées – directement dans le navigateur, sans installation.',
@@ -1455,7 +1457,7 @@ fr:{
   'about.footer':'Photographe · Innovateur Tech · Fondateur','about.location':'Enger, Allemagne',
 },
 it:{
-  'nav.features':'Funzioni','nav.workflow':'Flusso di lavoro','nav.series':'Serie','nav.pricing':'Prezzi','nav.about':'Chi siamo','nav.cta':'Apri l\'app →',
+  'nav.features':'Funzioni','nav.workflow':'Flusso di lavoro','nav.series':'Serie','nav.pricing':'Prezzi','nav.security':'Infrastruttura','nav.about':'Chi siamo','nav.cta':'Apri l\'app →',
   'hero.badge':'Nuovo: Riconoscimento immagini SuperMatch AI',
   'hero.h1':'Meno tagging manuale.<br><em>Più scatti.</em>',
   'hero.sub':'Skipi è l\'<strong>assistente fotografico intelligente per fotografi di motorsport</strong>. L\'IA riconosce i numeri di gara, assegna i piloti, scrive i metadati – direttamente nel browser, senza installazione.',
@@ -1499,7 +1501,7 @@ it:{
   'about.footer':'Fotografo · Innovatore Tech · Fondatore','about.location':'Enger, Germania',
 },
 es:{
-  'nav.features':'Funciones','nav.workflow':'Flujo de trabajo','nav.series':'Series','nav.pricing':'Precios','nav.about':'Sobre nosotros','nav.cta':'Abrir app →',
+  'nav.features':'Funciones','nav.workflow':'Flujo de trabajo','nav.series':'Series','nav.pricing':'Precios','nav.security':'Infraestructura','nav.about':'Sobre nosotros','nav.cta':'Abrir app →',
   'hero.badge':'Nuevo: Reconocimiento de imágenes SuperMatch AI',
   'hero.h1':'Menos etiquetado manual.<br><em>Más fotos.</em>',
   'hero.sub':'Skipi es el <strong>asistente fotográfico inteligente para fotógrafos de motorsport</strong>. La IA detecta números de carrera, asigna pilotos, escribe metadatos – directamente en el navegador, sin instalación.',
@@ -1543,7 +1545,7 @@ es:{
   'about.footer':'Fotógrafo · Innovador Tech · Fundador','about.location':'Enger, Alemania',
 },
 pt:{
-  'nav.features':'Funções','nav.workflow':'Fluxo de trabalho','nav.series':'Séries','nav.pricing':'Preços','nav.about':'Sobre nós','nav.cta':'Abrir app →',
+  'nav.features':'Funções','nav.workflow':'Fluxo de trabalho','nav.series':'Séries','nav.pricing':'Preços','nav.security':'Infraestrutura','nav.about':'Sobre nós','nav.cta':'Abrir app →',
   'hero.badge':'Novo: Reconhecimento de imagens SuperMatch AI',
   'hero.h1':'Menos tagging manual.<br><em>Mais fotos.</em>',
   'hero.sub':'Skipi é o <strong>assistente fotográfico inteligente para fotógrafos de motorsport</strong>. A IA deteta números de corrida, atribui pilotos, escreve metadados – diretamente no navegador, sem instalação.',
