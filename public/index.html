@@ -278,7 +278,7 @@
   .stat { text-align: center; }
   .stat-num {
     font-family: 'Century Gothic','Apple Gothic','URW Gothic',Futura,'Trebuchet MS','Nunito Sans',sans-serif;
-    font-size: 36px; font-weight: 900; color: #fff; line-height: 1;
+    font-size: 36px; font-weight: 900; color: var(--text0); line-height: 1;
   }
   .stat-num span { color: var(--orange); }
   .stat-label { font-size: 12px; color: var(--text2); margin-top: 4px; letter-spacing: .05em; text-transform: uppercase; }
@@ -1196,7 +1196,7 @@
       <div class="footer-copy" style="margin-top:2px;opacity:.6">eine Marke von <a href="https://weichert.at" style="color:inherit">weichert.at</a> · © 2026 Axel Weichert</div>
     </div>
     <div class="footer-links">
-      <a href="mailto:info@skipi.cloud" data-i18n="footer.contact">Kontakt</a>
+      <a href="#" onclick="openContactModal();return false;" data-i18n="footer.contact">Kontakt</a>
       <a href="/impressum" data-i18n="footer.imprint">Impressum</a>
       <a href="/datenschutz" data-i18n="footer.privacy">Datenschutz</a>
     </div>
@@ -1346,6 +1346,9 @@ de:{
   'faq.heading':'Häufige Fragen',
   'cta.h2':'Bereit für deinen<br><em>ersten Event mit Skipi?</em>','cta.sub':'Starte jetzt kostenlos. Keine Kreditkarte, keine Installation. Einfach Browser öffnen und loslegen.','cta.btn':'🚀 Skipi kostenlos testen',
   'footer.tagline':'skipi – Smart KI Picture Indexer','footer.contact':'Kontakt','footer.imprint':'Impressum','footer.privacy':'Datenschutz',
+  'contact.title':'Kontakt','contact.name':'Name','contact.email':'E-Mail','contact.message':'Nachricht',
+  'contact.placeholder_name':'Dein Name','contact.placeholder_email':'deine@email.de','contact.placeholder_message':'Wie können wir dir helfen?',
+  'contact.send':'Nachricht senden','contact.sending':'Wird gesendet…','contact.success':'Nachricht gesendet! Wir melden uns bald.','contact.error':'Fehler beim Senden. Bitte versuche es erneut.',
   'about.label':'Über uns','about.h2':'Gebaut von einem Fotografen.<br><em>Für Fotografen.</em>',
   'about.p1':'Axel Weichert fotografiert seit über zwei Jahrzehnten Motorsport. DTM, ADAC GT Masters, GT World Challenge Europe — er kennt die Strecken, die Fahrzeuge und den Druck, die während eines Renntags auf den Fotografen einprasseln: Hunderte oder Tausende Fotos, jedes einzeln taggen, Fahrernamen nachschlagen, Metadaten eintippen. Stunden, die nichts mit dem eigentlichen Handwerk zu tun haben.',
   'about.p2':'Als Gründer und Chefredakteur von <a href="https://100octane.de" target="_blank" style="color:var(--orange)">100octane.de</a> — einem der renommiertesten deutschsprachigen GT-Motorsportportale seit 2003 — und als professioneller Automotive- und Motorsportfotograf unter <a href="https://weichert.at" target="_blank" style="color:var(--orange)">weichert.at</a> mit über 20 betreuten Teams beliefert er regelmäßig Teams, Medien und Magazine mit Bildmaterial, das Reichweite schafft. Veröffentlichungen in Fachmagazinen wie <em>Motorsport Aktuell</em>, Kalender gemeinsam mit GT-Place sowie Kunstdrucke aus den härtesten Rennserien Europas gehören zu seinem Portfolio.',
@@ -1387,6 +1390,9 @@ en:{
   'faq.heading':'Frequently Asked Questions',
   'cta.h2':'Ready for your<br><em>first event with Skipi?</em>','cta.sub':'Start free now. No credit card, no installation. Just open your browser and go.','cta.btn':'🚀 Try Skipi for free',
   'footer.tagline':'skipi – Smart KI Picture Indexer','footer.contact':'Contact','footer.imprint':'Legal Notice','footer.privacy':'Privacy Policy',
+  'contact.title':'Contact','contact.name':'Name','contact.email':'Email','contact.message':'Message',
+  'contact.placeholder_name':'Your name','contact.placeholder_email':'your@email.com','contact.placeholder_message':'How can we help you?',
+  'contact.send':'Send message','contact.sending':'Sending…','contact.success':'Message sent! We\'ll be in touch soon.','contact.error':'Error sending. Please try again.',
   'about.label':'About','about.h2':'Built by a photographer.<br><em>For photographers.</em>',
   'about.p1':'Axel Weichert has been photographing motorsport for over two decades. DTM, ADAC GT Masters, GT World Challenge Europe — he knows the tracks, the cars and the pressure that builds up on a photographer during a race day: hundreds or thousands of photos, each tagged individually, driver names looked up, metadata entered. Hours that have nothing to do with the actual craft.',
   'about.p2':'As founder and editor-in-chief of <a href="https://100octane.de" target="_blank" style="color:var(--orange)">100octane.de</a> — one of the most renowned German-language GT motorsport portals since 2003 — and as a professional automotive and motorsport photographer at <a href="https://weichert.at" target="_blank" style="color:var(--orange)">weichert.at</a> with over 20 teams, he regularly supplies teams, media and magazines with images that generate reach. Publications in trade magazines such as <em>Motorsport Aktuell</em>, calendars with GT-Place and fine art prints from Europe\'s toughest racing series are part of his portfolio.',
@@ -1428,6 +1434,9 @@ fr:{
   'faq.heading':'Questions fréquentes',
   'cta.h2':'Prêt pour votre<br><em>premier événement avec Skipi ?</em>','cta.sub':'Commencez gratuitement maintenant. Pas de carte bancaire, pas d\'installation. Ouvrez simplement votre navigateur.','cta.btn':'🚀 Essayer Skipi gratuitement',
   'footer.tagline':'skipi – Smart KI Picture Indexer','footer.contact':'Contact','footer.imprint':'Mentions légales','footer.privacy':'Confidentialité',
+  'contact.title':'Contact','contact.name':'Nom','contact.email':'E-mail','contact.message':'Message',
+  'contact.placeholder_name':'Votre nom','contact.placeholder_email':'votre@email.fr','contact.placeholder_message':'Comment pouvons-nous vous aider\u00a0?',
+  'contact.send':'Envoyer le message','contact.sending':'Envoi en cours…','contact.success':'Message envoyé\u00a0! Nous vous répondrons bientôt.','contact.error':'Erreur lors de l\'envoi. Veuillez réessayer.',
   'about.label':'À propos','about.h2':'Créé par un photographe.<br><em>Pour les photographes.</em>',
   'about.p1':'Axel Weichert photographie le sport automobile depuis plus de vingt ans. DTM, ADAC GT Masters, GT World Challenge Europe — il connaît les circuits, les voitures et la pression qui s\u2019accumule sur un photographe pendant une journée de course\u00a0: des centaines ou des milliers de photos, chacune taguée individuellement, des noms de pilotes à rechercher, des métadonnées à saisir. Des heures sans rapport avec le vrai métier.',
   'about.p2':'Fondateur et rédacteur en chef de <a href="https://100octane.de" target="_blank" style="color:var(--orange)">100octane.de</a> — l\u2019un des portails motorsport GT germanophones les plus réputés depuis 2003 — et photographe professionnel sous <a href="https://weichert.at" target="_blank" style="color:var(--orange)">weichert.at</a> avec plus de 20 équipes, il fournit régulièrement équipes, médias et magazines en images à fort impact. Publications dans des magazines spécialisés, calendriers avec GT-Place et tirages d\u2019art font partie de son portfolio.',
@@ -1469,6 +1478,9 @@ it:{
   'faq.heading':'Domande frequenti',
   'cta.h2':'Pronto per il tuo<br><em>primo evento con Skipi?</em>','cta.sub':'Inizia gratis ora. Nessuna carta di credito, nessuna installazione. Apri semplicemente il browser.','cta.btn':'🚀 Prova Skipi gratis',
   'footer.tagline':'skipi – Smart KI Picture Indexer','footer.contact':'Contatto','footer.imprint':'Note legali','footer.privacy':'Privacy',
+  'contact.title':'Contatto','contact.name':'Nome','contact.email':'Email','contact.message':'Messaggio',
+  'contact.placeholder_name':'Il tuo nome','contact.placeholder_email':'tua@email.it','contact.placeholder_message':'Come possiamo aiutarti?',
+  'contact.send':'Invia messaggio','contact.sending':'Invio in corso…','contact.success':'Messaggio inviato! Ti risponderemo presto.','contact.error':'Errore nell\'invio. Riprova.',
   'about.label':'Chi siamo','about.h2':'Creato da un fotografo.<br><em>Per i fotografi.</em>',
   'about.p1':'Axel Weichert fotografa il motorsport da oltre vent\u2019anni. DTM, ADAC GT Masters, GT World Challenge Europe — conosce i circuiti, le auto e la pressione che si accumula su un fotografo durante una giornata di gara: centinaia o migliaia di foto, ognuna da taggare, nomi di piloti da cercare, metadati da inserire. Ore che non hanno nulla a che fare con il vero mestiere.',
   'about.p2':'Fondatore e direttore di <a href="https://100octane.de" target="_blank" style="color:var(--orange)">100octane.de</a> — uno dei portali motorsport GT in lingua tedesca più rinomati dal 2003 — e fotografo professionista su <a href="https://weichert.at" target="_blank" style="color:var(--orange)">weichert.at</a> con oltre 20 team, fornisce regolarmente team, media e riviste con immagini ad alto impatto. Pubblicazioni in riviste specializzate, calendari con GT-Place e stampe d\u2019arte fanno parte del suo portfolio.',
@@ -1510,6 +1522,9 @@ es:{
   'faq.heading':'Preguntas frecuentes',
   'cta.h2':'¿Listo para tu<br><em>primer evento con Skipi?</em>','cta.sub':'Empieza gratis ahora. Sin tarjeta de crédito, sin instalación. Solo abre el navegador.','cta.btn':'🚀 Probar Skipi gratis',
   'footer.tagline':'skipi – Smart KI Picture Indexer','footer.contact':'Contacto','footer.imprint':'Aviso legal','footer.privacy':'Privacidad',
+  'contact.title':'Contacto','contact.name':'Nombre','contact.email':'Email','contact.message':'Mensaje',
+  'contact.placeholder_name':'Tu nombre','contact.placeholder_email':'tu@email.es','contact.placeholder_message':'¿Cómo podemos ayudarte?',
+  'contact.send':'Enviar mensaje','contact.sending':'Enviando…','contact.success':'¡Mensaje enviado! Te responderemos pronto.','contact.error':'Error al enviar. Por favor, inténtalo de nuevo.',
   'about.label':'Sobre nosotros','about.h2':'Creado por un fotógrafo.<br><em>Para fotógrafos.</em>',
   'about.p1':'Axel Weichert lleva más de dos décadas fotografiando el motorsport. DTM, ADAC GT Masters, GT World Challenge Europe — conoce los circuitos, los coches y la presión que se acumula sobre un fotógrafo durante un día de carrera: cientos o miles de fotos, cada una etiquetada individualmente, nombres de pilotos que buscar, metadatos que introducir. Horas que no tienen nada que ver con el verdadero oficio.',
   'about.p2':'Como fundador y director de <a href="https://100octane.de" target="_blank" style="color:var(--orange)">100octane.de</a> — uno de los portales de motorsport GT en alemán más reconocidos desde 2003 — y como fotógrafo profesional en <a href="https://weichert.at" target="_blank" style="color:var(--orange)">weichert.at</a> con más de 20 equipos, suministra regularmente a equipos, medios y revistas imágenes de gran impacto. Publicaciones en revistas especializadas, calendarios con GT-Place y reproducciones artísticas forman parte de su portfolio.',
@@ -1551,6 +1566,9 @@ pt:{
   'faq.heading':'Perguntas frequentes',
   'cta.h2':'Pronto para o seu<br><em>primeiro evento com Skipi?</em>','cta.sub':'Comece grátis agora. Sem cartão de crédito, sem instalação. Basta abrir o navegador.','cta.btn':'🚀 Experimentar Skipi grátis',
   'footer.tagline':'skipi – Smart KI Picture Indexer','footer.contact':'Contacto','footer.imprint':'Aviso legal','footer.privacy':'Privacidade',
+  'contact.title':'Contacto','contact.name':'Nome','contact.email':'Email','contact.message':'Mensagem',
+  'contact.placeholder_name':'O seu nome','contact.placeholder_email':'seu@email.pt','contact.placeholder_message':'Como podemos ajudá-lo?',
+  'contact.send':'Enviar mensagem','contact.sending':'A enviar…','contact.success':'Mensagem enviada! Responderemos em breve.','contact.error':'Erro ao enviar. Por favor tente novamente.',
   'about.label':'Sobre nós','about.h2':'Criado por um fotógrafo.<br><em>Para fotógrafos.</em>',
   'about.p1':'Axel Weichert fotografa o automobilismo há mais de duas décadas. DTM, ADAC GT Masters, GT World Challenge Europe — conhece os circuitos, os carros e a pressão que se acumula sobre um fotógrafo durante um dia de corrida: centenas ou milhares de fotos, cada uma etiquetada individualmente, nomes de pilotos a pesquisar, metadados a introduzir. Horas que nada têm a ver com o verdadeiro ofício.',
   'about.p2':'Como fundador e diretor de <a href="https://100octane.de" target="_blank" style="color:var(--orange)">100octane.de</a> — um dos portais de motorsport GT em alemão mais reconhecidos desde 2003 — e como fotógrafo profissional em <a href="https://weichert.at" target="_blank" style="color:var(--orange)">weichert.at</a> com mais de 20 equipas, fornece regularmente equipas, media e revistas com imagens de grande impacto. Publicações em revistas especializadas, calendários com a GT-Place e impressões artísticas fazem parte do seu portfolio.',
@@ -1561,6 +1579,8 @@ pt:{
 };
 
 function applyLang(lang){
+  window._skipiLang = lang;
+  window._skipiT = T;
   const t=T[lang]||T.de;
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const k=el.getAttribute('data-i18n');
@@ -1599,6 +1619,120 @@ function applyLang(lang){
   const supported=LANGS.map(l=>l.code);
   applyLang(stored||(supported.includes(bl)?bl:'de'));
 })();
+</script>
+
+<!-- KONTAKT MODAL -->
+<div id="contact-modal" style="display:none;position:fixed;inset:0;z-index:9000;align-items:center;justify-content:center;padding:20px">
+  <div id="contact-overlay" onclick="closeContactModal()" style="position:absolute;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(4px)"></div>
+  <div style="position:relative;z-index:1;background:var(--dark2);border:1px solid var(--border);border-radius:16px;padding:36px;width:100%;max-width:480px;box-shadow:0 24px 80px rgba(0,0,0,.5)">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px">
+      <div style="font-size:18px;font-weight:800;color:var(--text0)" id="contact-title">Kontakt</div>
+      <button onclick="closeContactModal()" style="background:none;border:none;color:var(--text3);cursor:pointer;font-size:20px;line-height:1;padding:4px">✕</button>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div>
+        <label style="font-size:12px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:6px" id="contact-label-name">Name</label>
+        <input id="contact-name" type="text" style="width:100%;padding:11px 14px;background:var(--dark1);border:1px solid var(--border);border-radius:8px;color:var(--text0);font-size:14px;font-family:inherit;box-sizing:border-box;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='var(--orange)'" onblur="this.style.borderColor='var(--border)'" id="contact-name">
+      </div>
+      <div>
+        <label style="font-size:12px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:6px" id="contact-label-email">E-Mail</label>
+        <input id="contact-email" type="email" style="width:100%;padding:11px 14px;background:var(--dark1);border:1px solid var(--border);border-radius:8px;color:var(--text0);font-size:14px;font-family:inherit;box-sizing:border-box;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='var(--orange)'" onblur="this.style.borderColor='var(--border)'">
+      </div>
+      <div>
+        <label style="font-size:12px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:6px" id="contact-label-message">Nachricht</label>
+        <textarea id="contact-message" rows="5" style="width:100%;padding:11px 14px;background:var(--dark1);border:1px solid var(--border);border-radius:8px;color:var(--text0);font-size:14px;font-family:inherit;box-sizing:border-box;outline:none;resize:vertical;transition:border-color .2s" onfocus="this.style.borderColor='var(--orange)'" onblur="this.style.borderColor='var(--border)'"></textarea>
+      </div>
+      <div id="contact-msg" style="font-size:13px;display:none;padding:10px 14px;border-radius:8px"></div>
+      <button id="contact-send-btn" onclick="submitContact()" style="padding:13px;background:var(--orange);color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;transition:opacity .2s" id="contact-send-btn">Nachricht senden</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function openContactModal() {
+  const m = document.getElementById('contact-modal');
+  m.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  // Apply translations
+  const t = window._skipiT || {};
+  const lang = window._skipiLang || 'de';
+  const tr = t[lang] || t['de'] || {};
+  const set = (id, key) => { const el = document.getElementById(id); if(el && tr[key]) el.textContent = tr[key]; };
+  const setPlaceholder = (id, key) => { const el = document.getElementById(id); if(el && tr[key]) el.placeholder = tr[key]; };
+  set('contact-title', 'contact.title');
+  set('contact-label-name', 'contact.name');
+  set('contact-label-email', 'contact.email');
+  set('contact-label-message', 'contact.message');
+  set('contact-send-btn', 'contact.send');
+  setPlaceholder('contact-name', 'contact.placeholder_name');
+  setPlaceholder('contact-email', 'contact.placeholder_email');
+  setPlaceholder('contact-message', 'contact.placeholder_message');
+  // Reset form
+  document.getElementById('contact-name').value = '';
+  document.getElementById('contact-email').value = '';
+  document.getElementById('contact-message').value = '';
+  const msg = document.getElementById('contact-msg');
+  msg.style.display = 'none';
+  document.getElementById('contact-send-btn').disabled = false;
+  setTimeout(() => document.getElementById('contact-name').focus(), 100);
+}
+
+function closeContactModal() {
+  document.getElementById('contact-modal').style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeContactModal();
+});
+
+async function submitContact() {
+  const lang = window._skipiLang || 'de';
+  const t = (window._skipiT && window._skipiT[lang]) || {};
+  const name = document.getElementById('contact-name').value.trim();
+  const email = document.getElementById('contact-email').value.trim();
+  const message = document.getElementById('contact-message').value.trim();
+  const btn = document.getElementById('contact-send-btn');
+  const msg = document.getElementById('contact-msg');
+
+  if (!name || !email || !message) return;
+
+  btn.disabled = true;
+  btn.textContent = t['contact.sending'] || 'Wird gesendet…';
+  msg.style.display = 'none';
+
+  try {
+    const r = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, message })
+    });
+    const d = await r.json();
+    msg.style.display = 'block';
+    if (d.ok) {
+      msg.style.background = 'rgba(34,197,94,.1)';
+      msg.style.border = '1px solid rgba(34,197,94,.3)';
+      msg.style.color = '#4ade80';
+      msg.textContent = t['contact.success'] || 'Nachricht gesendet!';
+      btn.style.display = 'none';
+    } else {
+      msg.style.background = 'rgba(239,68,68,.1)';
+      msg.style.border = '1px solid rgba(239,68,68,.3)';
+      msg.style.color = '#f87171';
+      msg.textContent = t['contact.error'] || 'Fehler beim Senden.';
+      btn.disabled = false;
+      btn.textContent = t['contact.send'] || 'Nachricht senden';
+    }
+  } catch(e) {
+    msg.style.display = 'block';
+    msg.style.background = 'rgba(239,68,68,.1)';
+    msg.style.border = '1px solid rgba(239,68,68,.3)';
+    msg.style.color = '#f87171';
+    msg.textContent = t['contact.error'] || 'Fehler beim Senden.';
+    btn.disabled = false;
+    btn.textContent = t['contact.send'] || 'Nachricht senden';
+  }
+}
 </script>
 
 </body>

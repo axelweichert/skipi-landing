@@ -111,3 +111,9 @@
 ## [1.1.0] – 2026-04-16
 - Logo: skipi-logo-dark.svg in Nav, Hero und Footer
 - Font: Century Gothic, Gewichte 400/900
+
+## [1.3.41] – 2026-04-18
+- NEU: Kontaktformular-Modal (Name, E-Mail, Nachricht) mit Resend-Versand an axel@weichert.at
+- Worker: /api/contact POST-Endpoint
+- i18n: contact.* Keys in DE/EN/FR/IT/ES/PT
+- BUGFIX: stat-num Farbe (#fff → var(--text0)) – Zahlen im Light Mode jetzt schwarz statt weiß
