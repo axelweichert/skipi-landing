@@ -501,6 +501,10 @@
     .diff-grid { grid-template-columns: 1fr 1fr; }
     footer { flex-direction: column; gap: 16px; text-align: center; padding: 40px 24px; }
     .footer-links { justify-content: center; flex-wrap: wrap; }
+    /* About – Tablet: Foto kleiner, Text bleibt */
+    #about .about-inner { gap: 36px; }
+    #about .about-photo { width: 200px !important; }
+    #about .about-photo img { width: 200px !important; height: 250px !important; }
   }
 
   /* ── Mobile ── */
@@ -526,6 +530,12 @@
     .footer-links { justify-content: center; flex-wrap: wrap; gap: 16px; }
     details { padding: 16px; }
     details summary { font-size: 14px; }
+    /* About – Mobile: gestapelt, Foto zentriert */
+    #about .about-inner { flex-direction: column; align-items: center; gap: 28px; }
+    #about .about-photo { width: 100% !important; max-width: 280px; }
+    #about .about-photo img { width: 100% !important; height: 260px !important; }
+    /* Kontakt-Modal – Mobile: kleineres Padding */
+    #contact-modal > div:last-child { padding: 24px 20px; border-radius: 12px; }
   }
   .lang-item { display:flex; align-items:center; gap:8px; padding:7px 12px; border-radius:6px; cursor:pointer; font-size:13px; color:var(--text); white-space:nowrap; transition:background .15s; background:none; border:none; width:100%; text-align:left; font-family:inherit; }
   .lang-item:hover { background:var(--dark3); }
@@ -1102,10 +1112,10 @@
     <div class="section-label" style="justify-content:center;display:flex;margin-bottom:12px" data-i18n="about.label">Über uns</div>
     <h2 style="text-align:center;margin-bottom:56px" data-i18n-html="about.h2">Gebaut von einem Fotografen.<br><em>Für Fotografen.</em></h2>
 
-    <div style="display:flex;gap:56px;align-items:flex-start;flex-wrap:wrap;max-width:1000px;margin:0 auto">
+    <div class="about-inner" style="display:flex;gap:56px;align-items:flex-start;flex-wrap:wrap;max-width:1000px;margin:0 auto">
 
       <!-- Foto -->
-      <div style="flex:0 0 auto;width:260px;position:relative">
+      <div class="about-photo" style="flex:0 0 auto;width:260px;position:relative">
         <img src="/axel-weichert.jpg" alt="Axel Weichert" style="width:260px;height:320px;object-fit:cover;object-position:center top;border-radius:12px;display:block;box-shadow:0 20px 60px rgba(0,0,0,.4)">
         <div style="margin-top:16px;text-align:center">
           <div style="font-weight:800;font-size:16px;color:var(--text0)">Axel Weichert</div>
