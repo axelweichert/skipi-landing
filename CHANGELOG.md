@@ -180,3 +180,7 @@
 - NEU: Video-Sektion nach Workflow – Cloudflare Stream Embed
 - Label "Kinderleicht", Headline, Subtext, 3 Bullets, Video im Rahmen
 - i18n: demo.* Keys in DE/EN/FR/IT/ES/PT
+
+## [1.3.67] – 2026-04-19
+- BUGFIX: Demo-Sektion Bullets auf Mobile via .demo-bullets CSS-Klasse korrekt gestapelt
+- CHANGELOG nachgepflegt für v1.3.65+66
