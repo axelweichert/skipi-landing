@@ -54,6 +54,11 @@ export default {
       }
     }
 
+    // Favicon redirect
+    if (url.pathname === '/favicon.ico') {
+      return Response.redirect('https://skipi.cloud/skipi-logo-dark.svg', 301);
+    }
+
     return env.ASSETS.fetch(request);
   },
 };
