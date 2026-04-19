@@ -170,3 +170,8 @@
 - @font-face für Regular (400) und Bold/Black (700-900)
 - Font-Stack zurück auf Century Gothic als primärer Font
 - Nunito Sans bleibt als Fallback
+
+## [1.3.62] – 2026-04-19
+- Font: Adobe Fonts (Typekit) statt Self-Hosting – pvm2dym.css
+- Font-Stack: "century-gothic" (Adobe) als primär
+- TTF-Dateien aus Repo entfernt – lizenzkonform
