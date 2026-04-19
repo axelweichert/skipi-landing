@@ -129,3 +129,27 @@
 - NEU: Cloud Native Feature-Card nach Workflow-Sektion
 - USP: Keine App, kein Upload, 100 Fotos in unter 2 Minuten, Browser-basiert
 - i18n: cn.* Keys in DE/EN/FR/IT/ES/PT
+
+## [1.3.53] – 2026-04-19
+- NEU: Cloud Native Sektion nach Workflow – section-label (orange), h2, Untertitel, 5 Feature-Boxen
+- Feature-Boxen im gleichen Stil wie Infrastruktur/Security-Kacheln (BSI C5, DSGVO etc.)
+- USPs: Keine Installation, Kein Upload, 100 Fotos unter 2 Min, Mac/Win/Linux, Auto-Updates
+- i18n: cn.* Keys (label, h2, sub, f1t/d–f5t/d) in DE/EN/FR/IT/ES/PT
+
+## [1.3.52] – 2026-04-19
+- Cloud Native: Nur section-label + h2 + Untertitel (ohne Boxen)
+
+## [1.3.51] – 2026-04-19
+- Cloud Native: feature-card wide Layout (wird durch v1.3.52 überschrieben)
+
+## [1.3.50] – 2026-04-19
+- NEU: Cloud Native Feature-Card nach Workflow-Sektion (erste Version)
+
+## [1.3.49] – 2026-04-19
+- Workflow: Import-Bezeichnung → "Import Lightroom / Photo Mechanic / Luminar" in 6 Sprachen
+
+## [1.3.48] – 2026-04-19
+- Workflow-Sektion: "Event" → eigene Begriffe (Rennen fotografieren etc.) in 6 Sprachen
+- "Import Lightroom" → eigene Bezeichnung in 6 Sprachen
+- "Manuelles Tagging" → "Manuelles Verschlagworten" in 6 Sprachen
+- Zeiten: 8–12 Std → 6–10 Std (manuell), 6–10 Std → 4–6 Std (Tagging), stat.hours + wf.h2 angepasst
