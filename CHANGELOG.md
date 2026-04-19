@@ -157,3 +157,6 @@
 ## [1.3.55] – 2026-04-19
 - BUGFIX: h2 em – kein Kursiv, gleiche Größe/Gewicht wie Headline (font-style:normal, font-size:inherit)
 - CTA: "Bereit für deinen ersten Event mit Skipi?" → "Bereit für dein erstes Rennwochenende mit Skipi?" in 6 Sprachen
+
+## [1.3.56] – 2026-04-19
+- BUGFIX: Security-Sektion h2 Inline-Style entfernt – Schriftgröße/Gewicht jetzt identisch mit allen anderen Überschriften
