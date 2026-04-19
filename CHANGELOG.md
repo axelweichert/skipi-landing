@@ -117,3 +117,10 @@
 - Worker: /api/contact POST-Endpoint
 - i18n: contact.* Keys in DE/EN/FR/IT/ES/PT
 - BUGFIX: stat-num Farbe (#fff → var(--text0)) – Zahlen im Light Mode jetzt schwarz statt weiß
+
+## [1.3.48] – 2026-04-19
+- Workflow-Sektion: "Event" → eigene Begriffe (Rennen fotografieren, Rennwochenende etc.) in 6 Sprachen
+- "Import Lightroom" → "Import ins Bildarchiv" in 6 Sprachen
+- "Manuelles Tagging" → "Manuelles Verschlagworten" in 6 Sprachen
+- Zeiten: 8–12 Std → 6–10 Std (manuell gesamt), 6–10 Std → 4–6 Std (Tagging-Schritt)
+- stat.hours + wf.h2 angepasst in allen 6 Sprachen
