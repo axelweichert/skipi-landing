@@ -160,3 +160,7 @@
 
 ## [1.3.56] – 2026-04-19
 - BUGFIX: Security-Sektion h2 Inline-Style entfernt – Schriftgröße/Gewicht jetzt identisch mit allen anderen Überschriften
+
+## [1.3.57] – 2026-04-19
+- BUGFIX: h1 Safari – line-height 1.0 → 1.05 verhindert Ineinanderlaufen der Zeilen
+- h1 -webkit-font-smoothing: antialiased für konsistenteres Safari-Rendering
