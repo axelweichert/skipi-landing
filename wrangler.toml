@@ -10,5 +10,8 @@ mode = "smart"
 enabled = false
 invocation_logs = true
 
+[[tail_consumers]]
+service = "skipi-tail"
+
 [assets]
 directory = "./public"
