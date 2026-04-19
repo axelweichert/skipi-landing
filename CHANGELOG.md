@@ -124,3 +124,8 @@
 - "Manuelles Tagging" → "Manuelles Verschlagworten" in 6 Sprachen
 - Zeiten: 8–12 Std → 6–10 Std (manuell gesamt), 6–10 Std → 4–6 Std (Tagging-Schritt)
 - stat.hours + wf.h2 angepasst in allen 6 Sprachen
+
+## [1.3.50] – 2026-04-19
+- NEU: Cloud Native Feature-Card nach Workflow-Sektion
+- USP: Keine App, kein Upload, 100 Fotos in unter 2 Minuten, Browser-basiert
+- i18n: cn.* Keys in DE/EN/FR/IT/ES/PT
