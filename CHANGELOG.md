@@ -175,3 +175,8 @@
 - Font: Adobe Fonts (Typekit) statt Self-Hosting – pvm2dym.css
 - Font-Stack: "century-gothic" (Adobe) als primär
 - TTF-Dateien aus Repo entfernt – lizenzkonform
+
+## [1.3.65] – 2026-04-19
+- NEU: Video-Sektion nach Workflow – Cloudflare Stream Embed
+- Label "Kinderleicht", Headline, Subtext, 3 Bullets, Video im Rahmen
+- i18n: demo.* Keys in DE/EN/FR/IT/ES/PT
