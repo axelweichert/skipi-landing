@@ -128,6 +128,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
+  @font-face {
+    font-family: 'Century Gothic';
+    src: url('/fonts/centurygothic.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Century Gothic';
+    src: url('/fonts/centurygothic_bold.ttf') format('truetype');
+    font-weight: 700 900;
+    font-display: swap;
+  }
   :root {
     --orange: #e85d04;
     --orange-light: #ff6b1a;
@@ -173,7 +185,7 @@
   html { scroll-behavior: smooth; }
 
   body {
-    font-family: 'Nunito Sans','Century Gothic','Apple Gothic','URW Gothic',Futura,sans-serif;
+    font-family: 'Century Gothic','Apple Gothic','URW Gothic',Futura,'Nunito Sans',sans-serif;
     font-weight: 400;
     background: var(--dark);
     color: var(--text);
@@ -246,7 +258,7 @@
   .hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--orange); animation: pulse 2s infinite; }
   @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
   h1 {
-    font-family: 'Nunito Sans','Century Gothic','Apple Gothic','URW Gothic',Futura,sans-serif;
+    font-family: 'Century Gothic','Apple Gothic','URW Gothic',Futura,'Nunito Sans',sans-serif;
     font-size: clamp(52px, 5.5vw, 80px);
     font-weight: 900; line-height: 1.15;
     letter-spacing: -2px;
@@ -280,7 +292,7 @@
   .hero-stats { display: flex; gap: 40px; flex-wrap: wrap; justify-content: center; margin-bottom: 64px; }
   .stat { text-align: center; }
   .stat-num {
-    font-family: 'Nunito Sans','Century Gothic','Apple Gothic','URW Gothic',Futura,sans-serif;
+    font-family: 'Century Gothic','Apple Gothic','URW Gothic',Futura,'Nunito Sans',sans-serif;
     font-size: 36px; font-weight: 900; color: var(--text0); line-height: 1;
   }
   .stat-num span { color: var(--orange); }
@@ -330,7 +342,7 @@
     text-align: center;
   }
   h2 {
-    font-family: 'Nunito Sans','Century Gothic','Apple Gothic','URW Gothic',Futura,sans-serif;
+    font-family: 'Century Gothic','Apple Gothic','URW Gothic',Futura,'Nunito Sans',sans-serif;
     font-size: clamp(36px, 4vw, 56px);
     font-weight: 900; line-height: 1; letter-spacing: -1px;
     margin-bottom: 16px;
@@ -349,7 +361,7 @@
   .diff-item:last-child { border-right: none; }
   .diff-item:hover { background: var(--dark3); }
   .diff-icon { font-size: 28px; margin-bottom: 16px; }
-  .diff-title { font-family: 'Nunito Sans','Century Gothic','Apple Gothic','URW Gothic',Futura,sans-serif; font-size: 20px; font-weight: 800; margin-bottom: 8px; }
+  .diff-title { font-family: 'Century Gothic','Apple Gothic','URW Gothic',Futura,'Nunito Sans',sans-serif; font-size: 20px; font-weight: 800; margin-bottom: 8px; }
   .diff-desc { font-size: 13px; color: var(--text2); line-height: 1.6; }
   .diff-tag {
     display: inline-block; margin-top: 10px;
@@ -368,7 +380,7 @@
   .feature-card:hover { border-color: rgba(232,93,4,.3); transform: translateY(-2px); }
   .feature-card.wide { grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
   .feature-icon { font-size: 32px; margin-bottom: 16px; }
-  .feature-title { font-family: 'Nunito Sans','Century Gothic','Apple Gothic','URW Gothic',Futura,sans-serif; font-size: 24px; font-weight: 800; margin-bottom: 10px; }
+  .feature-title { font-family: 'Century Gothic','Apple Gothic','URW Gothic',Futura,'Nunito Sans',sans-serif; font-size: 24px; font-weight: 800; margin-bottom: 10px; }
   .feature-desc { font-size: 14px; color: var(--text2); line-height: 1.7; }
   .feature-list { list-style: none; margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
   .feature-list li { font-size: 13px; color: var(--text2); display: flex; gap: 8px; align-items: flex-start; }
@@ -387,7 +399,7 @@
   }
   .workflow-col-header.bad { background: rgba(239,68,68,.08); }
   .workflow-col-header.good { background: rgba(34,197,94,.08); }
-  .workflow-col-title { font-family: 'Nunito Sans','Century Gothic','Apple Gothic','URW Gothic',Futura,sans-serif; font-size: 18px; font-weight: 800; }
+  .workflow-col-title { font-family: 'Century Gothic','Apple Gothic','URW Gothic',Futura,'Nunito Sans',sans-serif; font-size: 18px; font-weight: 800; }
   .workflow-col-time { margin-left: auto; font-size: 13px; font-weight: 700; }
   .bad .workflow-col-time { color: #ef4444; }
   .good .workflow-col-time { color: var(--green); }
@@ -436,9 +448,9 @@
     letter-spacing: .05em; text-transform: uppercase;
     animation: pulse-orange 1.8s ease-in-out infinite;
   }
-  .pricing-name { font-family: 'Nunito Sans','Century Gothic','Apple Gothic','URW Gothic',Futura,sans-serif; font-size: 20px; font-weight: 800; margin-bottom: 8px; }
+  .pricing-name { font-family: 'Century Gothic','Apple Gothic','URW Gothic',Futura,'Nunito Sans',sans-serif; font-size: 20px; font-weight: 800; margin-bottom: 8px; }
   .pricing-price {
-    font-family: 'Nunito Sans','Century Gothic','Apple Gothic','URW Gothic',Futura,sans-serif;
+    font-family: 'Century Gothic','Apple Gothic','URW Gothic',Futura,'Nunito Sans',sans-serif;
     font-size: 52px; font-weight: 900; line-height: 1; margin: 16px 0 4px;
   }
   .pricing-price sup { font-size: 24px; vertical-align: top; margin-top: 12px; }
@@ -483,7 +495,7 @@
     padding: 48px; display: flex; flex-direction: column; align-items: center; gap: 0;
   }
   .footer-inner { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px; width: 100%; }
-  .footer-logo { display: flex; flex-direction: column; font-family: 'Nunito Sans','Century Gothic','Apple Gothic','URW Gothic',Futura,sans-serif; font-weight: 900; font-size: 18px; }
+  .footer-logo { display: flex; flex-direction: column; font-family: 'Century Gothic','Apple Gothic','URW Gothic',Futura,'Nunito Sans',sans-serif; font-weight: 900; font-size: 18px; }
   .footer-logo span { color: var(--orange); }
   .footer-copy { font-size: 12px; color: var(--text3); }
   .footer-links { display: flex; gap: 24px; align-items: center; }

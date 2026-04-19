@@ -164,3 +164,9 @@
 ## [1.3.57] – 2026-04-19
 - BUGFIX: h1 Safari – line-height 1.0 → 1.05 verhindert Ineinanderlaufen der Zeilen
 - h1 -webkit-font-smoothing: antialiased für konsistenteres Safari-Rendering
+
+## [1.3.61] – 2026-04-19
+- Century Gothic als Self-Hosted Web-Font eingebunden (centurygothic.ttf + centurygothic_bold.ttf)
+- @font-face für Regular (400) und Bold/Black (700-900)
+- Font-Stack zurück auf Century Gothic als primärer Font
+- Nunito Sans bleibt als Fallback
