@@ -153,3 +153,7 @@
 - "Import Lightroom" → eigene Bezeichnung in 6 Sprachen
 - "Manuelles Tagging" → "Manuelles Verschlagworten" in 6 Sprachen
 - Zeiten: 8–12 Std → 6–10 Std (manuell), 6–10 Std → 4–6 Std (Tagging), stat.hours + wf.h2 angepasst
+
+## [1.3.55] – 2026-04-19
+- BUGFIX: h2 em – kein Kursiv, gleiche Größe/Gewicht wie Headline (font-style:normal, font-size:inherit)
+- CTA: "Bereit für deinen ersten Event mit Skipi?" → "Bereit für dein erstes Rennwochenende mit Skipi?" in 6 Sprachen
