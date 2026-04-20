@@ -184,3 +184,8 @@
 ## [1.3.67] – 2026-04-19
 - BUGFIX: Demo-Sektion Bullets auf Mobile via .demo-bullets CSS-Klasse korrekt gestapelt
 - CHANGELOG nachgepflegt für v1.3.65+66
+
+## [1.3.71] – 2026-04-20
+- SEO/GEO: llms.txt aktualisiert – neue Feature-Namen, ADAC GT4, Backup, Demo-URL
+- SEO: Schema.org Agency-Plan ergänzt, softwareVersion auf 1.6.188, neue featureList-Einträge
+- SEO: Sitemap lastmod auf 2026-04-20 aktualisiert

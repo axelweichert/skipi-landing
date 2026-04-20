@@ -1,18 +1,19 @@
-# Skipi – Smart KI Photo Indexer
+# Skipi – Smart KI Picture Indexer
 > Skipi ist die KI-gestützte Softwarelösung für Motorsport-Fotografen, die das manuelle Verschlagworten von Rennfotos automatisiert.
 
 ## Was ist Skipi?
-Skipi ist ein browserbasiertes SaaS-Tool, das Motorsport-Fotografen dabei hilft, ihre Fotos automatisch zu indexieren und mit Metadaten anzureichern. Die Software erkennt Startnummern, ordnet Fahrer zu und schreibt Keywords direkt in JPEG-Dateien – ohne Installation, ohne Upload der Originalbilder.
+Skipi ist ein browserbasiertes SaaS-Tool, das Motorsport-Fotografen dabei hilft, ihre Fotos automatisch zu indexieren und mit Metadaten anzureichern. Die Software erkennt Startnummern, ordnet Fahrer zu und schreibt Keywords direkt in JPEG-Dateien – ohne Installation, ohne Upload der Originalbilder. Skipi läuft vollständig im Browser – kein Download, keine Installation, kein Warten.
 
 ## Kernfunktionen
-- **OptiMatch AI**: Erkennt 1-3-stellige Startnummern automatisch direkt aus dem Foto
-- **SuperMatch AI**: KI-Bildähnlichkeits-Matching für verdeckte oder schlecht lesbare Startnummern
-- **FaceMatch AI**: Erkennt Fahrer anhand von Referenzbildern in der Fahrer-Datenbank
-- **Starterlisten-Import**: Liest PDF- und CSV-Starterlisten von WEC, ADAC GT Masters, DTM, NLS, GT World Challenge, Deutsche Bergmeisterschaft und weiteren Serien automatisch aus
+- **SuperMatch AI Bilderkennung**: Erkennt Startnummern automatisch, ordnet Fahrer zu, schreibt XMP/IPTC-Metadaten direkt in JPEG-Dateien
+- **Personen-Erkennung**: Erkennt Fahrer anhand von Referenzbildern in der Fahrer-Datenbank
+- **Starterlisten-Import**: Liest PDF- und CSV-Starterlisten automatisch aus (WEC, ADAC GT Masters, DTM, NLS, GT World Challenge, Deutsche Bergmeisterschaft, ADAC GT4 Germany und weitere)
 - **Session-Automatik**: Ordnet Fotos automatisch Sessions (Training, Qualifying, Rennen) anhand des EXIF-Zeitstempels zu
-- **XMP & IPTC Metadaten**: Schreibt Keywords direkt in JPEG-Dateien oder exportiert XMP-Sidecar-Dateien für Lightroom und Capture One
+- **XMP & IPTC Metadaten**: Schreibt Keywords direkt in JPEG-Dateien oder exportiert XMP-Sidecar-Dateien für Lightroom, Capture One, Photo Mechanic
 - **Fahrer-Datenbank**: Persistente Fahrer-Datenbank mit Referenzbildern pro Team und Fahrzeug
 - **Team-Ordner**: Sortiert bearbeitete Fotos automatisch in Unterordner nach Teamname
+- **Datenbank-Backup**: Verschlüsseltes Backup der Fahrer-Datenbank in der EU (Zubuchoption)
+- **Cloud Native**: Kein Upload der Originalfotos – läuft komplett im Browser, funktioniert auf Mac, Windows und Linux
 
 ## Unterstützte Motorsport-Serien
 WEC / FIA Langstrecken-WM, Nürburgring Langstrecken-Serie (NLS), GT World Challenge Europe, Deutsche Automobil-Bergmeisterschaft (DMSB), DTM, ADAC GT Masters, ADAC GT4 Germany, Porsche Carrera Cup Deutschland, BMW M2 Cup, 24h Nürburgring, CSV-Import für alle anderen Serien
@@ -25,15 +26,14 @@ WEC / FIA Langstrecken-WM, Nürburgring Langstrecken-Serie (NLS), GT World Chall
 - **Unlimited**: 89 €/Monat, 15.000 Token
 - **Agency**: 199 €/Monat, 50.000 Token, bis zu 20 Team-Mitglieder
 
-1 Token = 1 vollständig analysiertes Foto. Token verfallen am Monatsende. PowerUp-Pakete für zusätzliche Token sind jederzeit zubuchbar.
+1 Token = 1 vollständig analysiertes Foto. PowerUp-Pakete für zusätzliche Token sind jederzeit zubuchbar (5€/500 Token, 12€/1.500 Token, 35€/5.000 Token).
 
 ## Technische Details
 - Läuft vollständig im Browser – keine Installation, kein Desktop-Client
-- Benötigt Google Chrome oder einen modernen Chromium-Browser
 - Originalfotos werden nicht hochgeladen; nur komprimierte Thumbnails (max. 800px) für die KI-Analyse
 - Metadaten werden direkt in JPEG-Dateien auf dem Gerät des Nutzers geschrieben
-- Betrieben auf Cloudflare EU-Infrastruktur
-- DSGVO-konform; Daten werden vollständig getrennt pro Nutzer gespeichert
+- Betrieben auf Cloudflare EU-Infrastruktur (London/WEUR)
+- DSGVO-konform; Daten vollständig getrennt pro Nutzer gespeichert
 
 ## Zielgruppe
 Motorsport-Fotografen, Rennfotografen, Sportfotografen, Foto-Agenturen mit Motorsport-Fokus
@@ -41,6 +41,7 @@ Motorsport-Fotografen, Rennfotografen, Sportfotografen, Foto-Agenturen mit Motor
 ## URLs
 - Produktseite: https://www.skipi.cloud
 - App: https://app.skipi.cloud
+- Demo-Video: https://www.skipi.cloud/#demo
 - Datenschutz: https://www.skipi.cloud/datenschutz
 - Impressum: https://www.skipi.cloud/impressum
 
