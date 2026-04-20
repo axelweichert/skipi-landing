@@ -7,7 +7,7 @@ account_id = "6b9b3fa0e9f6be87faf7ca1b212641a3"
 mode = "smart"
 
 [observability.logs]
-enabled = false
+enabled = true
 invocation_logs = true
 
 [[tail_consumers]]
