@@ -1,5 +1,8 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.74] – 2026-04-21
+- i18n: „Warum Skipi" Übersetzungen für FR, IT, ES, PT ergänzt
+
 ## [1.3.73] – 2026-04-21
 - Preise und Token-Pakete aktualisiert (nach Marktanalyse):
   - Advanced: 1.200 Token (statt 2.000)
