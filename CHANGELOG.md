@@ -1,5 +1,13 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.75] – 2026-04-21
+- PowerUp-Token-Pakete erhöht (ehrliche Marge):
+  - 5 €/500 → 9 €/500
+  - 12 €/1.500 → 19 €/1.200
+  - 35 €/5.000 → 49 €/3.000
+  - NEU: 99 €/6.500
+- Preise nun konsistent mit monatlichen Abo-Plänen (gleicher €/Token)
+
 ## [1.3.74] – 2026-04-21
 - i18n: „Warum Skipi" Übersetzungen für FR, IT, ES, PT ergänzt
 
