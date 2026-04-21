@@ -1,5 +1,18 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.73] – 2026-04-21
+- Preise und Token-Pakete aktualisiert (nach Marktanalyse):
+  - Advanced: 1.200 Token (statt 2.000)
+  - Premier: 49 € / 3.000 Token (statt 39 € / 6.000)
+  - Unlimited: 99 € / 7.500 Token (statt 89 € / 15.000)
+  - Agency: 249 € / 20.000 Token (statt 199 € / 50.000)
+  - Essentials 9 € / 500 Token unverändert
+- Schema.org JSON-LD Offers synchron
+- FAQ-Richtwert aktualisiert (DTM-Wochenende ca. 3.000–4.000 Token)
+- FAQ-Preisübersicht aktualisiert
+- i18n DE + EN: neue Beträge
+- NEU: „Warum Skipi" Vergleichs-Box unter Pricing — hebt visuellen Fahrzeug-Match und Gesichtserkennung hervor
+
 ## [1.3.39] – 2026-04-18
 - NEU: Über-uns-Sektion mit Foto von Axel Weichert, vollständiger Biografie und Links zu weichert.at + 100octane.de
 - Nav: „Über uns" Link in alle 6 Sprachen ergänzt
