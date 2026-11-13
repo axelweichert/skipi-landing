@@ -3,6 +3,8 @@
 ## [1.3.76] – 2026-11-13
 - Neuer Bereich „Skipi für Mac“ mit Download (Mac-App 0.6.3, /download/Skipi-mac.zip), Menüpunkt „Mac-App“, in allen 6 Sprachen
 - workers.dev und Vorschau-Adressen dauerhaft aus (OWL-2360), Prüfung vor jedem Deploy
+- Texte auf Browser **und** Mac-App umgestellt: Hero, „Browser oder Mac-App“, Cloud-Native-Bereich, Abschlussaufruf, FAQ „Muss ich eine Software installieren?“, Meta-Beschreibung, Schema.org, llms.txt/llms-full.txt (alle 6 Sprachen)
+- Datenschutz-Angabe präzisiert: Vorschaubilder für die KI im Browser max. 800 px, in der Mac-App max. 1.600 px
 
 ## [1.3.75] – 2026-04-21
 - PowerUp-Token-Pakete erhöht (ehrliche Marge):

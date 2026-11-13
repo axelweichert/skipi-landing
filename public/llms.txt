@@ -2,7 +2,7 @@
 > Skipi ist die KI-gestützte Softwarelösung für Motorsport-Fotografen, die das manuelle Verschlagworten von Rennfotos automatisiert.
 
 ## Was ist Skipi?
-Skipi ist ein browserbasiertes SaaS-Tool, das Motorsport-Fotografen dabei hilft, ihre Fotos automatisch zu indexieren und mit Metadaten anzureichern. Die Software erkennt Startnummern, ordnet Fahrer zu und schreibt Keywords direkt in JPEG-Dateien – ohne Installation, ohne Upload der Originalbilder. Skipi läuft vollständig im Browser – kein Download, keine Installation, kein Warten.
+Skipi ist ein SaaS-Tool für Browser und Mac, das Motorsport-Fotografen dabei hilft, ihre Fotos automatisch zu indexieren und mit Metadaten anzureichern. Die Software erkennt Startnummern, ordnet Fahrer zu und schreibt Keywords direkt in JPEG-Dateien – ohne Installation, ohne Upload der Originalbilder. Skipi läuft im Browser ohne Installation oder als eigene Mac-App.
 
 ## Kernfunktionen
 - **Skipi für Mac**: Native macOS-App (ab macOS 14, Apple-Chip und Intel) mit derselben Erkennung und demselben Konto, Download unter https://skipi.cloud/download/Skipi-mac.zip
@@ -14,7 +14,7 @@ Skipi ist ein browserbasiertes SaaS-Tool, das Motorsport-Fotografen dabei hilft,
 - **Fahrer-Datenbank**: Persistente Fahrer-Datenbank mit Referenzbildern pro Team und Fahrzeug
 - **Team-Ordner**: Sortiert bearbeitete Fotos automatisch in Unterordner nach Teamname
 - **Datenbank-Backup**: Verschlüsseltes Backup der Fahrer-Datenbank in der EU (Zubuchoption)
-- **Cloud Native**: Kein Upload der Originalfotos – läuft komplett im Browser, funktioniert auf Mac, Windows und Linux
+- **Cloud Native**: Kein Upload der Originalfotos – läuft im Browser auf Mac, Windows und Linux, auf dem Mac auch als eigene App
 
 ## Unterstützte Motorsport-Serien
 WEC / FIA Langstrecken-WM, Nürburgring Langstrecken-Serie (NLS), GT World Challenge Europe, Deutsche Automobil-Bergmeisterschaft (DMSB), DTM, ADAC GT Masters, ADAC GT4 Germany, Porsche Carrera Cup Deutschland, BMW M2 Cup, 24h Nürburgring, CSV-Import für alle anderen Serien
@@ -30,8 +30,8 @@ WEC / FIA Langstrecken-WM, Nürburgring Langstrecken-Serie (NLS), GT World Chall
 1 Token = 1 vollständig analysiertes Foto. PowerUp-Pakete für zusätzliche Token sind jederzeit zubuchbar (5€/500 Token, 12€/1.500 Token, 35€/5.000 Token).
 
 ## Technische Details
-- Läuft vollständig im Browser – keine Installation, kein Desktop-Client
-- Originalfotos werden nicht hochgeladen; nur komprimierte Thumbnails (max. 800px) für die KI-Analyse
+- Läuft im Browser ohne Installation; optional als native Mac-App (ab macOS 14)
+- Originalfotos werden nicht hochgeladen; nur komprimierte Thumbnails (Browser max. 800 px, Mac-App max. 1.600 px) für die KI-Analyse
 - Metadaten werden direkt in JPEG-Dateien auf dem Gerät des Nutzers geschrieben
 - Betrieben auf Cloudflare EU-Infrastruktur (London/WEUR)
 - DSGVO-konform; Daten vollständig getrennt pro Nutzer gespeichert

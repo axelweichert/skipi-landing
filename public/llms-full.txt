@@ -99,9 +99,9 @@ Token-Richtwerte: Club-Event 200–500 Token, NLS-Wochenende 500–1.500 Token, 
 
 ## Technische Spezifikation
 
-- **Plattform:** Browserbasiert, keine Installation
+- **Plattform:** Browser ohne Installation, dazu native Mac-App (ab macOS 14, Download https://skipi.cloud/download/Skipi-mac.zip)
 - **Browser:** Google Chrome (empfohlen), Chromium-basierte Browser
-- **Datensicherheit:** Originalfotos werden nicht hochgeladen; nur komprimierte Thumbnails (max. 800px) für KI-Analyse
+- **Datensicherheit:** Originalfotos werden nicht hochgeladen; nur komprimierte Thumbnails (Browser max. 800 px, Mac-App max. 1.600 px) für KI-Analyse
 - **Infrastruktur:** Cloudflare EU-Infrastruktur, DSGVO-konform
 - **Datentrennung:** Vollständig nutzergetrennte Datenbank
 - **Metadatenstandards:** IPTC, XMP (Adobe-Standard), JPEG-Header
@@ -118,7 +118,7 @@ Skipi richtet sich an professionelle und semi-professionelle Motorsport-Fotograf
 OptiMatch AI erreicht über 95% Genauigkeit bei klar lesbaren Startnummern. Bei verdeckten oder schlecht lesbaren Nummern ergänzt SuperMatch AI die Erkennung über Bildähnlichkeit.
 
 **Muss ich Fotos hochladen?**
-Nein. Die Originalfotos bleiben auf dem Gerät des Nutzers. Nur komprimierte Vorschaubilder (max. 800px) werden für die KI-Analyse übertragen.
+Nein. Die Originalfotos bleiben auf dem Gerät des Nutzers. Nur komprimierte Vorschaubilder (Browser max. 800 px, Mac-App max. 1.600 px) werden für die KI-Analyse übertragen.
 
 **Funktioniert Skipi offline?**
 Nein. Für die KI-Analyse ist eine Internetverbindung erforderlich. Das Laden und Sortieren von Fotos funktioniert jedoch offline.
