@@ -1,6 +1,6 @@
 # Skipi Landing Page
 
-**Version:** 1.3.53  
+**Version:** 1.3.76  
 **Live:** [www.skipi.cloud](https://www.skipi.cloud)
 
 Marketing-Landing-Page für Skipi – Smart KI Picture Indexer.

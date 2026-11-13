@@ -5,6 +5,7 @@
 Skipi ist ein browserbasiertes SaaS-Tool, das Motorsport-Fotografen dabei hilft, ihre Fotos automatisch zu indexieren und mit Metadaten anzureichern. Die Software erkennt Startnummern, ordnet Fahrer zu und schreibt Keywords direkt in JPEG-Dateien – ohne Installation, ohne Upload der Originalbilder. Skipi läuft vollständig im Browser – kein Download, keine Installation, kein Warten.
 
 ## Kernfunktionen
+- **Skipi für Mac**: Native macOS-App (ab macOS 14, Apple-Chip und Intel) mit derselben Erkennung und demselben Konto, Download unter https://skipi.cloud/download/Skipi-mac.zip
 - **SuperMatch AI Bilderkennung**: Erkennt Startnummern automatisch, ordnet Fahrer zu, schreibt XMP/IPTC-Metadaten direkt in JPEG-Dateien
 - **Personen-Erkennung**: Erkennt Fahrer anhand von Referenzbildern in der Fahrer-Datenbank
 - **Starterlisten-Import**: Liest PDF- und CSV-Starterlisten automatisch aus (WEC, ADAC GT Masters, DTM, NLS, GT World Challenge, Deutsche Bergmeisterschaft, ADAC GT4 Germany und weitere)
