@@ -1,5 +1,8 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.79] – 2026-11-14
+- Skipi für Mac 1.0.0 (Versionsnummer gleichgezogen mit Windows und Linux)
+
 ## [1.3.78] – 2026-11-14
 - Skipi für Linux zum Download (Linux-App 1.0.0, /download/Skipi-linux.tar.gz aus R2 „skipi-downloads“)
 - Bereich „Apps“: dritte Karte Linux; Texte auf Browser, Mac, Windows **und** Linux umgestellt (alle 6 Sprachen, FAQ, Schema.org, llms.txt)
