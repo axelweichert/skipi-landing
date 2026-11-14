@@ -1,6 +1,6 @@
 {
   "name": "skipi-landing",
-  "version": "1.3.77",
+  "version": "1.3.78",
   "private": true,
   "scripts": {
     "deploy": "node scripts/pruefe-workers-dev.mjs && wrangler deploy"

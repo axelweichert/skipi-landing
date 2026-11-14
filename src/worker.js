@@ -54,17 +54,19 @@ export default {
       }
     }
 
-    // Windows-App: zu groß für statische Assets (max. 25 MiB), deshalb aus R2 „skipi-downloads“
-    if (url.pathname === '/download/Skipi-windows.zip' && (request.method === 'GET' || request.method === 'HEAD')) {
+    // Windows- und Linux-App: zu groß für statische Assets (max. 25 MiB), deshalb aus R2 „skipi-downloads“
+    const DOWNLOADS = { '/download/Skipi-windows.zip': 'application/zip', '/download/Skipi-linux.tar.gz': 'application/gzip' };
+    if (DOWNLOADS[url.pathname] && (request.method === 'GET' || request.method === 'HEAD')) {
+      const key = url.pathname.slice('/download/'.length);
       const obj = request.method === 'HEAD'
-        ? await env.DOWNLOADS.head('Skipi-windows.zip')
-        : await env.DOWNLOADS.get('Skipi-windows.zip', { range: request.headers, onlyIf: request.headers });
+        ? await env.DOWNLOADS.head(key)
+        : await env.DOWNLOADS.get(key, { range: request.headers, onlyIf: request.headers });
       if (!obj) return new Response('Nicht gefunden', { status: 404 });
       const headers = new Headers();
       obj.writeHttpMetadata(headers);
       headers.set('ETag', obj.httpEtag);
-      headers.set('Content-Type', 'application/zip');
-      headers.set('Content-Disposition', 'attachment; filename="Skipi-windows.zip"');
+      headers.set('Content-Type', DOWNLOADS[url.pathname]);
+      headers.set('Content-Disposition', `attachment; filename="${key}"`);
       headers.set('Accept-Ranges', 'bytes');
       headers.set('Cache-Control', 'public, max-age=300');
       if (request.method === 'HEAD') { headers.set('Content-Length', String(obj.size)); return new Response(null, { headers }); }

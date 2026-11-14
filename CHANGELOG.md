@@ -1,5 +1,9 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.78] – 2026-11-14
+- Skipi für Linux zum Download (Linux-App 1.0.0, /download/Skipi-linux.tar.gz aus R2 „skipi-downloads“)
+- Bereich „Apps“: dritte Karte Linux; Texte auf Browser, Mac, Windows **und** Linux umgestellt (alle 6 Sprachen, FAQ, Schema.org, llms.txt)
+
 ## [1.3.77] – 2026-11-14
 - Skipi für Windows zum Download (Windows-App 1.0.0, /download/Skipi-windows.zip aus R2 „skipi-downloads“, weil größer als 25 MiB)
 - Bereich „Apps“: Mac und Windows nebeneinander; Menüpunkt „Apps“; Texte auf Browser, Mac **und** Windows umgestellt (Hero, „Browser oder App“, Cloud Native, Abschlussaufruf, FAQ, Meta-Beschreibung, Schema.org, llms.txt/llms-full.txt, alle 6 Sprachen)
