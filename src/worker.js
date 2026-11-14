@@ -54,6 +54,29 @@ export default {
       }
     }
 
+    // Windows-App: zu groß für statische Assets (max. 25 MiB), deshalb aus R2 „skipi-downloads“
+    if (url.pathname === '/download/Skipi-windows.zip' && (request.method === 'GET' || request.method === 'HEAD')) {
+      const obj = request.method === 'HEAD'
+        ? await env.DOWNLOADS.head('Skipi-windows.zip')
+        : await env.DOWNLOADS.get('Skipi-windows.zip', { range: request.headers, onlyIf: request.headers });
+      if (!obj) return new Response('Nicht gefunden', { status: 404 });
+      const headers = new Headers();
+      obj.writeHttpMetadata(headers);
+      headers.set('ETag', obj.httpEtag);
+      headers.set('Content-Type', 'application/zip');
+      headers.set('Content-Disposition', 'attachment; filename="Skipi-windows.zip"');
+      headers.set('Accept-Ranges', 'bytes');
+      headers.set('Cache-Control', 'public, max-age=300');
+      if (request.method === 'HEAD') { headers.set('Content-Length', String(obj.size)); return new Response(null, { headers }); }
+      if (!('body' in obj)) return new Response(null, { status: 304, headers });
+      if (request.headers.has('Range') && obj.range && 'offset' in obj.range) {
+        const end = obj.range.offset + obj.range.length - 1;
+        headers.set('Content-Range', `bytes ${obj.range.offset}-${end}/${obj.size}`);
+        return new Response(obj.body, { status: 206, headers });
+      }
+      return new Response(obj.body, { headers });
+    }
+
     // Favicon redirect
     if (url.pathname === '/favicon.ico') {
       return Response.redirect('https://skipi.cloud/skipi-logo-dark.svg', 301);

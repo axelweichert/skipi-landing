@@ -1,5 +1,10 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.77] – 2026-11-14
+- Skipi für Windows zum Download (Windows-App 1.0.0, /download/Skipi-windows.zip aus R2 „skipi-downloads“, weil größer als 25 MiB)
+- Bereich „Apps“: Mac und Windows nebeneinander; Menüpunkt „Apps“; Texte auf Browser, Mac **und** Windows umgestellt (Hero, „Browser oder App“, Cloud Native, Abschlussaufruf, FAQ, Meta-Beschreibung, Schema.org, llms.txt/llms-full.txt, alle 6 Sprachen)
+- Fehlendes `</p>` im Mac-Hinweis ergänzt
+
 ## [1.3.76] – 2026-11-13
 - Neuer Bereich „Skipi für Mac“ mit Download (Mac-App 0.6.3, /download/Skipi-mac.zip), Menüpunkt „Mac-App“, in allen 6 Sprachen
 - workers.dev und Vorschau-Adressen dauerhaft aus (OWL-2360), Prüfung vor jedem Deploy

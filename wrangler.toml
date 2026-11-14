@@ -15,6 +15,11 @@ enabled = true
 [[tail_consumers]]
 service = "skipi-tail"
 
+# Windows-App (> 25 MiB, deshalb nicht in public/)
+[[r2_buckets]]
+binding = "DOWNLOADS"
+bucket_name = "skipi-downloads"
+
 [assets]
 directory = "./public"
 binding = "ASSETS"
