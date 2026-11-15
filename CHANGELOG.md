@@ -1,5 +1,9 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.80] – 2026-11-15
+- Tarife: Unlimited 6.000 Token/Monat (statt 7.500), Agency 14.000 Token/Monat (statt 20.000), Preise unverändert (OWL-2466)
+- Korrektur: Agency stand auf Französisch, Italienisch, Spanisch und Portugiesisch mit 50.000 Token
+
 ## [1.3.79] – 2026-11-14
 - Skipi für Mac 1.0.0 (Versionsnummer gleichgezogen mit Windows und Linux)
 
