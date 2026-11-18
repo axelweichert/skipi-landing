@@ -1811,6 +1811,7 @@ function applyLang(lang){
         <label style="font-size:12px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:6px" id="contact-label-message">Nachricht</label>
         <textarea id="contact-message" rows="5" style="width:100%;padding:11px 14px;background:var(--dark1);border:1px solid var(--border);border-radius:8px;color:var(--text0);font-size:14px;font-family:inherit;box-sizing:border-box;outline:none;resize:vertical;transition:border-color .2s" onfocus="this.style.borderColor='var(--orange)'" onblur="this.style.borderColor='var(--border)'"></textarea>
       </div>
+      <div id="contact-turnstile"></div>
       <div id="contact-msg" style="font-size:13px;display:none;padding:10px 14px;border-radius:8px"></div>
       <button id="contact-send-btn" onclick="submitContact()" style="padding:13px;background:var(--orange);color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;transition:opacity .2s" id="contact-send-btn">Nachricht senden</button>
     </div>
@@ -1844,6 +1845,29 @@ function openContactModal() {
   msg.style.display = 'none';
   document.getElementById('contact-send-btn').disabled = false;
   setTimeout(() => document.getElementById('contact-name').focus(), 100);
+  contactTurnstile();
+}
+
+// Sicherheitsprüfung (Cloudflare Turnstile): wird erst geladen, wenn das Kontaktfenster geöffnet wird.
+const SKIPI_TURNSTILE = '0x4AAAAAADBKidPh0y6uzmiK';
+let _tsWidget = null, _tsToken = '';
+function contactTurnstile() {
+  _tsToken = '';
+  const zeigen = () => {
+    if (_tsWidget !== null) { window.turnstile.reset(_tsWidget); return; }
+    _tsWidget = window.turnstile.render('#contact-turnstile', { sitekey: SKIPI_TURNSTILE, theme: 'dark', size: 'flexible', appearance: 'interaction-only', language: 'auto',
+      callback: (t) => { _tsToken = t; }, 'expired-callback': () => { _tsToken = ''; }, 'error-callback': () => { _tsToken = ''; } });
+  };
+  if (window.turnstile) return zeigen();
+  if (document.getElementById('ts-skript')) return;
+  const s = document.createElement('script'); s.id = 'ts-skript'; s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit'; s.async = true; s.onload = zeigen;
+  document.head.append(s);
+}
+function contactToken() {
+  return new Promise((fertig) => {
+    const start = Date.now();
+    const takt = setInterval(() => { if (_tsToken || Date.now() - start > 25000) { clearInterval(takt); fertig(_tsToken); } }, 200);
+  });
 }
 
 function closeContactModal() {
@@ -1874,7 +1898,7 @@ async function submitContact() {
     const r = await fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email, message })
+      body: JSON.stringify({ name, email, message, turnstile: await contactToken() })
     });
     const d = await r.json();
     msg.style.display = 'block';
@@ -1891,6 +1915,7 @@ async function submitContact() {
       msg.textContent = t['contact.error'] || 'Fehler beim Senden.';
       btn.disabled = false;
       btn.textContent = t['contact.send'] || 'Nachricht senden';
+      contactTurnstile();
     }
   } catch(e) {
     msg.style.display = 'block';

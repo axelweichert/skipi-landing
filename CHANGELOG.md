@@ -1,5 +1,8 @@
 # Changelog – Skipi Landing Page
 
+## [1.3.81] – 2026-11-18 (OWL-2559)
+- Kontaktformular gegen Werbung geschützt: Cloudflare Turnstile (lädt erst beim Öffnen des Kontaktfensters), Inhaltsprüfung, nur noch Aufrufe von der eigenen Seite, Angaben werden in der Mail maskiert. Datenschutzerklärung ergänzt.
+
 ## [1.3.80] – 2026-11-15
 - Tarife: Unlimited 6.000 Token/Monat (statt 7.500), Agency 14.000 Token/Monat (statt 20.000), Preise unverändert (OWL-2466)
 - Korrektur: Agency stand auf Französisch, Italienisch, Spanisch und Portugiesisch mit 50.000 Token
